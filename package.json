@@ -8,7 +8,6 @@
     "test": "test"
   },
   "scripts": {
-    "start": "node start.js",
     "compile": "node compile.js",
     "deploy": "node deploy.js",
     "performance": "node performance.js",
