@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs-extra"); // fs with extra functions
 const solc = require("solc");
 
-const CONTRACT_FILE_NAME = "ConfidentialMultipartyRegisteredEDelivery";
+const CONTRACT_FILE_NAME = "ConfidentialMultipartyRegisteredEDeliveryWithoutTTP";
 
 const buildPath = path.resolve(__dirname, "contracts/build");
 var contractPath = path.resolve(__dirname, "contracts", CONTRACT_FILE_NAME+".sol");

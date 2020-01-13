@@ -1,7 +1,7 @@
 {
-  "name": "confidentialmultipartyregisterededelivery",
+  "name": "confidentialMultipartyRegisteredEDeliveryWithoutTTP",
   "version": "1.0.0",
-  "description": "Non-Confidential Multiparty Registered eDelivery contract for Ethereum with Factory",
+  "description": "Confidential Multiparty Registered eDelivery contract for Ethereum with Factory without TTP",
   "main": "start.js",
   "directories": {
     "doc": "doc",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/secomuib/ConfidentialMultipartyRegisteredEDelivery.git"
+    "url": "git+https://github.com/secomuib/ConfidentialMultipartyRegisteredEDeliveryWithoutTTP.git"
   },
   "keywords": [
     "ethereum",
@@ -26,9 +26,9 @@
   "author": "Seguretat i comerç electrònic (SECOM)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/secomuib/ConfidentialMultipartyRegisteredEDelivery/issues"
+    "url": "https://github.com/secomuib/ConfidentialMultipartyRegisteredEDeliveryWithoutTTP/issues"
   },
-  "homepage": "https://github.com/secomuib/ConfidentialMultipartyRegisteredEDelivery#readme",
+  "homepage": "https://github.com/secomuib/ConfidentialMultipartyRegisteredEDeliveryWithoutTTP#readme",
   "dependencies": {
     "big-integer": "^1.6.43",
     "elgamal": "^0.3.0",

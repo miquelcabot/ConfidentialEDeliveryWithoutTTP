@@ -1,5 +1,5 @@
-# ConfidentialMultipartyRegisteredEDelivery
-Confidential Multiparty Registered eDelivery contract for Ethereum with Factory
+# ConfidentialMultipartyRegisteredEDeliveryWithoutTTP
+Confidential Multiparty Registered eDelivery contract for Ethereum with Factory without TTP
 
 ## Requirements
 Requirements: [Node 8.0](https://nodejs.org/en/download/).

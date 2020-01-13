@@ -912,13 +912,13 @@ library BigNumber {
 }
 
 // Factory contract for Confidential Multiparty Registered eDelivery
-contract ConfidentialMultipartyRegisteredEDeliveryFactory {
+contract ConfidentialMultipartyRegisteredEDeliveryWithoutTTPFactory {
     mapping(address => address[]) public senderDeliveries;
     mapping(address => address[]) public receiverDeliveries;
     address[] public deliveries;
 
     function createDelivery(address[] _receivers, bytes _m1, bytes _m2, bytes _ya, bytes _g, bytes _p, uint _term1, uint _term2) public payable {
-        address newDelivery = (new ConfidentialMultipartyRegisteredEDelivery)
+        address newDelivery = (new ConfidentialMultipartyRegisteredEDeliveryWithoutTTP)
             .value(msg.value)(msg.sender, _receivers, _m1, _m2, _ya, _g, _p, _term1, _term2);
         deliveries.push(newDelivery);
         senderDeliveries[msg.sender].push(newDelivery);
@@ -953,7 +953,7 @@ contract ConfidentialMultipartyRegisteredEDeliveryFactory {
 }
 
 // Confidential Multiparty Registered eDelivery
-contract ConfidentialMultipartyRegisteredEDelivery {
+contract ConfidentialMultipartyRegisteredEDeliveryWithoutTTP {
     using BigNumber for *;
 
     // Possible states
