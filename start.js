@@ -125,13 +125,6 @@ const start = async () => {
 
     console.log(`Check at Client? ${check_js_1.equals(check_js_2)?"OK":"NO"}`);
 
-    const check_sm_1 = await deliveryContract.methods.check_1(accounts[1], "0x"+w.toString(16), "0x"+r.toString(16)).call();
-    console.log(`check_sm_1: ${check_sm_1}`);
-    const check_sm_2 = await deliveryContract.methods.check_2(accounts[1], "0x"+w.toString(16), "0x"+r.toString(16)).call();
-    console.log(`check_sm_2: ${check_sm_2}`);
-
-    console.log(`Check at Smart Contract? ${check_sm_1==check_sm_2?"OK":"NO"}`);
-
     await deliveryContract.methods
         .finish(accounts[1], "0x"+w.toString(16), "0x"+r.toString(16))
         .send({ from: accounts[0], gas: '6000000' });    //PENDENT

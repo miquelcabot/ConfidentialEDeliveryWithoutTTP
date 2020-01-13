@@ -1081,16 +1081,6 @@ contract ConfidentialMultipartyRegisteredEDeliveryWithoutTTP {
         return (res.val);
     }
 
-    function check_1(address _receiver, bytes _w, bytes _r) public view returns(bytes) {
-        // g^w mod p
-        return bignumber_modexp(g, _w, p);
-    }
-
-    function check_2(address _receiver, bytes _w, bytes _r) public view returns(bytes) {
-        // ((g^r mod p)·(yb^c mod p)) mod p
-        return bignumber_modmul( bignumber_modexp(g, _r, p) , bignumber_modexp(receiversState[_receiver].yb, receiversState[_receiver].c, p), p);
-    }
-
     // finish() lets sender finish the delivery sending the message
     function finish(address _receiver, bytes _w, bytes _r) public {
         require((now >= start+term1) || (acceptedReceivers>=receivers.length),
