@@ -1082,15 +1082,15 @@ contract ConfidentialMultipartyRegisteredEDeliveryWithoutTTP {
     }
 
     // finish() lets sender finish the delivery sending the message
-    function finish(address _receiver, bytes _w, bytes _r) public {
+    function finish(address _receiver, bytes _w) public {
         require((now >= start+term1) || (acceptedReceivers>=receivers.length),
             "The timeout term1 has not been reached and not all receivers have been accepted the delivery");
         require (msg.sender==sender, "Only sender of the delivery can finish");
 
         // g^w mod p
         bytes memory check_1 = bignumber_modexp(g, _w, p);
-        // ((g^r mod p)·(yb^c mod p)) mod p
-        bytes memory check_2 = bignumber_modmul( bignumber_modexp(g, _r, p) , bignumber_modexp(receiversState[_receiver].yb, receiversState[_receiver].c, p), p);
+        // (m1·(yb^c mod p)) mod p
+        bytes memory check_2 = bignumber_modmul( m1 , bignumber_modexp(receiversState[_receiver].yb, receiversState[_receiver].c, p), p);
 
         require (bignumber_equals(check_1, check_2), "(g^w mod p) and (((g^r mod p)·(yb^c mod p)) mod p) are not equals");
 

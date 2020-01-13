@@ -121,7 +121,7 @@ describe('Certified eDelivery Contract', () => {
       .send({ from: accounts[2], gas: '6000000' });
     try { 
       await deliveryContract.methods
-        .finish(accounts[1], "0x"+w.toString(16), "0x"+r.toString(16))
+        .finish(accounts[1], "0x"+w.toString(16))
         .send({ from: accounts[3], gas: '6000000' });
       assert(false);
     } catch (err) {
@@ -137,7 +137,7 @@ describe('Certified eDelivery Contract', () => {
       .accept("0x"+z1.toString(16), "0x"+z2.toString(16), "0x"+yb.toString(16), "0x"+c.toString(16))
       .send({ from: accounts[2], gas: '6000000' });
     await deliveryContract.methods
-      .finish(accounts[1], "0x"+w.toString(16), "0x"+r.toString(16))
+      .finish(accounts[1], "0x"+w.toString(16))
       .send({ from: accounts[0], gas: '6000000' });
     let state = await deliveryContract.methods.getState(accounts[1]).call();
     assert.equal(state, "finished");
@@ -151,7 +151,7 @@ describe('Certified eDelivery Contract', () => {
       .accept("0x"+z1.toString(16), "0x"+z2.toString(16), "0x"+yb.toString(16), "0x"+c.toString(16))
       .send({ from: accounts[2], gas: '6000000' });
     await deliveryContract.methods
-      .finish(accounts[1], "0x"+w.toString(16), "0x"+r.toString(16))
+      .finish(accounts[1], "0x"+w.toString(16))
       .send({ from: accounts[0], gas: '6000000' });
 
     let _m2 = bigInt((await deliveryContract.methods.m2().call()).substr(2), 16);
