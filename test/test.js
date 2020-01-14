@@ -157,7 +157,9 @@ describe('Certified eDelivery Contract', () => {
     let _m2 = bigInt((await deliveryContract.methods.m2().call()).substr(2), 16);
     let _ya = bigInt((await deliveryContract.methods.ya().call()).substr(2), 16);
     let _p = bigInt((await deliveryContract.methods.p().call()).substr(2), 16);
-    let _r = r;  // Pendent
+    let _w = bigInt((await deliveryContract.methods.getW(accounts[1]).call()).substr(2), 16);
+
+    let _r = _w.subtract(c.multiply(xb.mod(_p)));  // r = w-c*xb mod q
 
     const messageReceived = _m2.divide(_ya.modPow(_r, _p));
     const messageReceivedBuffer = Buffer.from(messageReceived.toString(16), 'hex');
