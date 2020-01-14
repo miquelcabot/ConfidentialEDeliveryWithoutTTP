@@ -1133,4 +1133,9 @@ contract ConfidentialMultipartyRegisteredEDeliveryWithoutTTP {
             return "rejected";
         }
     }
+
+    // getW(address) returns the W value of a receiver
+    function getW(address _receiver) public view returns (bytes) {
+        return receiversState[_receiver].w;
+    }
 }
