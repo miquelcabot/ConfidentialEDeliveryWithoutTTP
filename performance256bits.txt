@@ -1,0 +1,815 @@
+$ npm run performance
+
+> confidentialMultipartyRegisteredEDeliveryWithoutTTP@1.0.0 performance /Users/miquel/Desktop/ConfidentialMultipartyRegisteredEDeliveryWithoutTTP
+> node performance.js
+
+
+For 1 receiver/s
+------------------------
+Delay of function deploy(): 0s 147.434731ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 94.358924ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 97.251868ms
+Wei cost of function deploy():             77,292,840,000,012,290
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 109.300903ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 99.658299ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 86.696321ms
+Wei cost of function deploy():             77,292,840,000,012,290
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 107.315036ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 103.043032ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 61.527214ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 69.633825ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+AVERAGE DELAY: 97.6220153ms
+AVERAGE WEI COST: 77,292,839,999,999,180
+AVERAGE GAS COST: 3,864,642
+Delay of function createDelivery(): 0s 274.291265ms
+Wei cost of function createDelivery():             54,860,000,000,016,380
+Gas cost of function createDelivery():                          2,743,000
+Delay of function createDelivery(): 0s 185.8854ms
+Wei cost of function createDelivery():             54,860,000,000,000,000
+Gas cost of function createDelivery():                          2,743,000
+Delay of function createDelivery(): 0s 164.817182ms
+Wei cost of function createDelivery():             54,860,000,000,000,000
+Gas cost of function createDelivery():                          2,743,000
+Delay of function createDelivery(): 0s 160.909122ms
+Wei cost of function createDelivery():             54,860,000,000,000,000
+Gas cost of function createDelivery():                          2,743,000
+Delay of function createDelivery(): 0s 148.580275ms
+Wei cost of function createDelivery():             54,860,000,000,000,000
+Gas cost of function createDelivery():                          2,743,000
+Delay of function createDelivery(): 0s 163.76162ms
+Wei cost of function createDelivery():             54,860,000,000,000,000
+Gas cost of function createDelivery():                          2,743,000
+Delay of function createDelivery(): 0s 151.481904ms
+Wei cost of function createDelivery():             54,860,000,000,000,000
+Gas cost of function createDelivery():                          2,743,000
+Delay of function createDelivery(): 0s 137.660432ms
+Wei cost of function createDelivery():             54,860,000,000,000,000
+Gas cost of function createDelivery():                          2,743,000
+Delay of function createDelivery(): 0s 138.555197ms
+Wei cost of function createDelivery():             54,860,000,000,000,000
+Gas cost of function createDelivery():                          2,743,000
+Delay of function createDelivery(): 0s 131.666746ms
+Wei cost of function createDelivery():             54,860,000,000,000,000
+Gas cost of function createDelivery():                          2,743,000
+AVERAGE DELAY: 165.76091429999997ms
+AVERAGE WEI COST: 54,860,000,000,001,640
+AVERAGE GAS COST: 2,743,000
+Delay of function accept(): 0s 123.36697ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 97.585538ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 90.219377ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 95.003131ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 89.881605ms
+Wei cost of function accept():              4,884,139,999,985,664
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 87.453339ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 95.635192ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 86.211899ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 90.102221ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 92.235971ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+AVERAGE DELAY: 94.76952429999999ms
+AVERAGE WEI COST: 4,884,140,000,000,410
+AVERAGE GAS COST: 244,207
+Delay of function finish(): 0s 399.202672ms
+Wei cost of function finish():              3,853,619,999,997,952
+Gas cost of function finish():                            192,681
+Delay of function finish(): 0s 359.762495ms
+Wei cost of function finish():              3,853,619,999,997,952
+Gas cost of function finish():                            192,681
+Delay of function finish(): 0s 354.663922ms
+Wei cost of function finish():              3,853,619,999,997,952
+Gas cost of function finish():                            192,681
+Delay of function finish(): 0s 306.149681ms
+Wei cost of function finish():              3,853,619,999,997,952
+Gas cost of function finish():                            192,681
+Delay of function finish(): 0s 292.272992ms
+Wei cost of function finish():              3,853,619,999,997,952
+Gas cost of function finish():                            192,681
+Delay of function finish(): 0s 307.731666ms
+Wei cost of function finish():              3,853,619,999,997,952
+Gas cost of function finish():                            192,681
+Delay of function finish(): 0s 293.898446ms
+Wei cost of function finish():              3,853,619,999,997,952
+Gas cost of function finish():                            192,681
+Delay of function finish(): 0s 283.402612ms
+Wei cost of function finish():              3,853,620,000,014,336
+Gas cost of function finish():                            192,681
+Delay of function finish(): 0s 305.907635ms
+Wei cost of function finish():              3,853,619,999,997,952
+Gas cost of function finish():                            192,681
+Delay of function finish(): 0s 290.973111ms
+Wei cost of function finish():              3,853,619,999,997,952
+Gas cost of function finish():                            192,681
+AVERAGE DELAY: 319.39652319999993ms
+AVERAGE WEI COST: 3,853,619,999,999,590.5
+AVERAGE GAS COST: 192,681
+
+For 2 receiver/s
+------------------------
+Delay of function deploy(): 0s 60.902804ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 60.492088ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 54.512097ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 50.657782ms
+Wei cost of function deploy():             77,292,840,000,012,290
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 47.609342ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 46.095508ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 62.599108ms
+Wei cost of function deploy():             77,292,840,000,012,290
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 53.353337ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 63.97322ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 50.706636ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+AVERAGE DELAY: 55.090192200000004ms
+AVERAGE WEI COST: 77,292,839,999,999,180
+AVERAGE GAS COST: 3,864,642
+Delay of function createDelivery(): 0s 216.983242ms
+Wei cost of function createDelivery():             56,537,420,000,002,050
+Gas cost of function createDelivery():                          2,826,871
+Delay of function createDelivery(): 0s 165.22934ms
+Wei cost of function createDelivery():             56,537,420,000,002,050
+Gas cost of function createDelivery():                          2,826,871
+Delay of function createDelivery(): 0s 175.8545ms
+Wei cost of function createDelivery():             56,537,420,000,002,050
+Gas cost of function createDelivery():                          2,826,871
+Delay of function createDelivery(): 0s 152.730237ms
+Wei cost of function createDelivery():             56,537,420,000,002,050
+Gas cost of function createDelivery():                          2,826,871
+Delay of function createDelivery(): 0s 149.866618ms
+Wei cost of function createDelivery():             56,537,420,000,002,050
+Gas cost of function createDelivery():                          2,826,871
+Delay of function createDelivery(): 0s 155.953224ms
+Wei cost of function createDelivery():             56,537,420,000,002,050
+Gas cost of function createDelivery():                          2,826,871
+Delay of function createDelivery(): 0s 156.642079ms
+Wei cost of function createDelivery():             56,537,419,999,985,660
+Gas cost of function createDelivery():                          2,826,871
+Delay of function createDelivery(): 0s 168.214755ms
+Wei cost of function createDelivery():             56,537,420,000,002,050
+Gas cost of function createDelivery():                          2,826,871
+Delay of function createDelivery(): 0s 170.75025ms
+Wei cost of function createDelivery():             56,537,420,000,002,050
+Gas cost of function createDelivery():                          2,826,871
+Delay of function createDelivery(): 0s 154.866398ms
+Wei cost of function createDelivery():             56,537,420,000,002,050
+Gas cost of function createDelivery():                          2,826,871
+AVERAGE DELAY: 166.7090643ms
+AVERAGE WEI COST: 56,537,420,000,000,410
+AVERAGE GAS COST: 2,826,871
+Delay of function accept(): 0s 106.882554ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 96.192723ms
+Wei cost of function accept():              4,884,139,999,985,664
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 99.737687ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 93.659472ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 105.372243ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 108.600902ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 92.879957ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 87.521244ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 101.943879ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 93.293624ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+AVERAGE DELAY: 98.6084285ms
+AVERAGE WEI COST: 4,884,140,000,000,410
+AVERAGE GAS COST: 244,207
+Delay of function finish(): 0s 320.143497ms
+Wei cost of function finish():              5,222,980,000,006,144
+Gas cost of function finish():                            261,149
+Delay of function finish(): 0s 296.900693ms
+Wei cost of function finish():              5,222,979,999,989,760
+Gas cost of function finish():                            261,149
+Delay of function finish(): 0s 299.450928ms
+Wei cost of function finish():              5,222,980,000,006,144
+Gas cost of function finish():                            261,149
+Delay of function finish(): 0s 336.498822ms
+Wei cost of function finish():              5,222,980,000,006,144
+Gas cost of function finish():                            261,149
+Delay of function finish(): 0s 308.605337ms
+Wei cost of function finish():              5,222,979,999,989,760
+Gas cost of function finish():                            261,149
+Delay of function finish(): 0s 315.627313ms
+Wei cost of function finish():              5,222,980,000,006,144
+Gas cost of function finish():                            261,149
+Delay of function finish(): 0s 331.059985ms
+Wei cost of function finish():              5,222,979,999,989,760
+Gas cost of function finish():                            261,149
+Delay of function finish(): 0s 307.894821ms
+Wei cost of function finish():              5,222,980,000,006,144
+Gas cost of function finish():                            261,149
+Delay of function finish(): 0s 297.50727ms
+Wei cost of function finish():              5,222,980,000,006,144
+Gas cost of function finish():                            261,149
+Delay of function finish(): 0s 367.027634ms
+Wei cost of function finish():              5,222,979,999,989,760
+Gas cost of function finish():                            261,149
+AVERAGE DELAY: 318.07163ms
+AVERAGE WEI COST: 5,222,979,999,999,590
+AVERAGE GAS COST: 261,149
+
+For 10 receiver/s
+------------------------
+Delay of function deploy(): 0s 37.537015ms
+Wei cost of function deploy():             77,292,840,000,012,290
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 95.264818ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 76.574135ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 68.649328ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 63.614795ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 57.306178ms
+Wei cost of function deploy():             77,292,840,000,012,290
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 50.352425ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 50.78867ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 42.805106ms
+Wei cost of function deploy():             77,292,840,000,012,290
+Gas cost of function deploy():                          3,864,642
+Delay of function deploy(): 0s 53.364012ms
+Wei cost of function deploy():             77,292,839,999,995,900
+Gas cost of function deploy():                          3,864,642
+AVERAGE DELAY: 59.6256482ms
+AVERAGE WEI COST: 77,292,840,000,000,820
+AVERAGE GAS COST: 3,864,642
+Delay of function createDelivery(): 0s 263.808685ms
+Wei cost of function createDelivery():             69,966,899,999,997,950
+Gas cost of function createDelivery():                          3,498,345
+Delay of function createDelivery(): 0s 420.972954ms
+Wei cost of function createDelivery():             69,966,899,999,997,950
+Gas cost of function createDelivery():                          3,498,345
+Delay of function createDelivery(): 0s 247.565465ms
+Wei cost of function createDelivery():             69,966,899,999,997,950
+Gas cost of function createDelivery():                          3,498,345
+Delay of function createDelivery(): 0s 356.900174ms
+Wei cost of function createDelivery():             69,966,899,999,997,950
+Gas cost of function createDelivery():                          3,498,345
+Delay of function createDelivery(): 0s 405.098435ms
+Wei cost of function createDelivery():             69,966,899,999,997,950
+Gas cost of function createDelivery():                          3,498,345
+Delay of function createDelivery(): 0s 272.312884ms
+Wei cost of function createDelivery():             69,966,900,000,014,340
+Gas cost of function createDelivery():                          3,498,345
+Delay of function createDelivery(): 0s 246.838564ms
+Wei cost of function createDelivery():             69,966,899,999,997,950
+Gas cost of function createDelivery():                          3,498,345
+Delay of function createDelivery(): 0s 244.335491ms
+Wei cost of function createDelivery():             69,966,899,999,997,950
+Gas cost of function createDelivery():                          3,498,345
+Delay of function createDelivery(): 0s 244.56043ms
+Wei cost of function createDelivery():             69,966,899,999,997,950
+Gas cost of function createDelivery():                          3,498,345
+Delay of function createDelivery(): 0s 253.67376ms
+Wei cost of function createDelivery():             69,966,899,999,997,950
+Gas cost of function createDelivery():                          3,498,345
+AVERAGE DELAY: 295.6066842ms
+AVERAGE WEI COST: 69,966,899,999,999,590
+AVERAGE GAS COST: 3,498,345
+Delay of function accept(): 0s 96.826652ms
+Wei cost of function accept():              4,884,139,999,985,664
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 82.252832ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 83.705055ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 98.404763ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 96.269136ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 83.211213ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 81.606295ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 84.177159ms
+Wei cost of function accept():              4,884,139,999,985,664
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 87.851435ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+Delay of function accept(): 0s 81.157741ms
+Wei cost of function accept():              4,884,140,000,002,048
+Gas cost of function accept():                            244,207
+AVERAGE DELAY: 87.54622810000001ms
+AVERAGE WEI COST: 4,884,139,999,998,771
+AVERAGE GAS COST: 244,207
+Delay of function finish(): 0s 591.920205ms
+Wei cost of function finish():             16,177,859,999,989,760
+Gas cost of function finish():                            808,893
+Delay of function finish(): 0s 590.629525ms
+Wei cost of function finish():             16,177,860,000,006,144
+Gas cost of function finish():                            808,893
+Delay of function finish(): 0s 501.445022ms
+Wei cost of function finish():             16,177,860,000,006,144
+Gas cost of function finish():                            808,893
+Delay of function finish(): 0s 468.115382ms
+Wei cost of function finish():             16,177,859,999,989,760
+Gas cost of function finish():                            808,893
+Delay of function finish(): 0s 481.831612ms
+Wei cost of function finish():             16,177,860,000,006,144
+Gas cost of function finish():                            808,893
+Delay of function finish(): 0s 473.578953ms
+Wei cost of function finish():             16,177,860,000,006,144
+Gas cost of function finish():                            808,893
+Delay of function finish(): 0s 485.868281ms
+Wei cost of function finish():             16,177,859,999,989,760
+Gas cost of function finish():                            808,893
+Delay of function finish(): 0s 480.769616ms
+Wei cost of function finish():             16,177,860,000,006,144
+Gas cost of function finish():                            808,893
+Delay of function finish(): 0s 459.708643ms
+Wei cost of function finish():             16,177,859,999,989,760
+Gas cost of function finish():                            808,893
+Delay of function finish(): 0s 458.373754ms
+Wei cost of function finish():             16,177,860,000,006,144
+Gas cost of function finish():                            808,893
+AVERAGE DELAY: 499.22409930000003ms
+AVERAGE WEI COST: 16,177,859,999,999,590
+AVERAGE GAS COST: 808,893
+
+For 1 receiver/s
+------------------------
+Delay of function deploy(): 0s 64.54467ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 48.650386ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 39.549092ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 63.536406ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 51.732835ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 47.744811ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 52.589777ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 45.482849ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 38.10868ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 78.636068ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+AVERAGE DELAY: 53.05755739999999ms
+AVERAGE WEI COST: 31,365,680,000,000,000
+AVERAGE GAS COST: 1,568,284
+Delay of function createDelivery(): 0s 86.697965ms
+Wei cost of function createDelivery():             20,768,039,999,995,904
+Gas cost of function createDelivery():                          1,038,402
+Delay of function createDelivery(): 0s 80.21647ms
+Wei cost of function createDelivery():             20,768,040,000,012,290
+Gas cost of function createDelivery():                          1,038,402
+Delay of function createDelivery(): 0s 72.503998ms
+Wei cost of function createDelivery():             20,768,039,999,995,904
+Gas cost of function createDelivery():                          1,038,402
+Delay of function createDelivery(): 0s 73.716717ms
+Wei cost of function createDelivery():             20,768,039,999,995,904
+Gas cost of function createDelivery():                          1,038,402
+Delay of function createDelivery(): 0s 94.800005ms
+Wei cost of function createDelivery():             20,768,039,999,995,904
+Gas cost of function createDelivery():                          1,038,402
+Delay of function createDelivery(): 0s 66.993438ms
+Wei cost of function createDelivery():             20,768,040,000,012,290
+Gas cost of function createDelivery():                          1,038,402
+Delay of function createDelivery(): 0s 72.306049ms
+Wei cost of function createDelivery():             20,768,039,999,995,904
+Gas cost of function createDelivery():                          1,038,402
+Delay of function createDelivery(): 0s 68.701145ms
+Wei cost of function createDelivery():             20,768,039,999,995,904
+Gas cost of function createDelivery():                          1,038,402
+Delay of function createDelivery(): 0s 72.430576ms
+Wei cost of function createDelivery():             20,768,039,999,995,904
+Gas cost of function createDelivery():                          1,038,402
+Delay of function createDelivery(): 0s 67.801317ms
+Wei cost of function createDelivery():             20,768,040,000,012,290
+Gas cost of function createDelivery():                          1,038,402
+AVERAGE DELAY: 75.61676800000001ms
+AVERAGE WEI COST: 20,768,040,000,000,820
+AVERAGE GAS COST: 1,038,402
+Delay of function accept(): 0s 48.73688ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 40.325538ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 39.862362ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 35.417016ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 40.512654ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 38.175484ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 33.446537ms
+Wei cost of function accept():                954,219,999,985,664
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 35.787202ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 30.41368ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 34.539728ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+AVERAGE DELAY: 37.72170809999999ms
+AVERAGE WEI COST: 954,220,000,000,409.6
+AVERAGE GAS COST: 47,711
+Delay of function finish(): 0s 67.989673ms
+Wei cost of function finish():              1,212,839,999,995,904
+Gas cost of function finish():                             60,642
+Delay of function finish(): 0s 56.275331ms
+Wei cost of function finish():              1,212,839,999,995,904
+Gas cost of function finish():                             60,642
+Delay of function finish(): 0s 61.780793ms
+Wei cost of function finish():              1,212,839,999,995,904
+Gas cost of function finish():                             60,642
+Delay of function finish(): 0s 56.870873ms
+Wei cost of function finish():              1,212,840,000,012,288
+Gas cost of function finish():                             60,642
+Delay of function finish(): 0s 57.203043ms
+Wei cost of function finish():              1,212,839,999,995,904
+Gas cost of function finish():                             60,642
+Delay of function finish(): 0s 69.653293ms
+Wei cost of function finish():              1,212,839,999,995,904
+Gas cost of function finish():                             60,642
+Delay of function finish(): 0s 58.849803ms
+Wei cost of function finish():              1,212,839,999,995,904
+Gas cost of function finish():                             60,642
+Delay of function finish(): 0s 55.572606ms
+Wei cost of function finish():              1,212,840,000,012,288
+Gas cost of function finish():                             60,642
+Delay of function finish(): 0s 58.881024ms
+Wei cost of function finish():              1,212,839,999,995,904
+Gas cost of function finish():                             60,642
+Delay of function finish(): 0s 57.389918ms
+Wei cost of function finish():              1,212,839,999,995,904
+Gas cost of function finish():                             60,642
+AVERAGE DELAY: 60.0466357ms
+AVERAGE WEI COST: 1,212,839,999,999,180.8
+AVERAGE GAS COST: 60,642
+
+For 2 receiver/s
+------------------------
+Delay of function deploy(): 0s 34.348966ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 38.270551ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 48.129893ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 44.459352ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 43.847853ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 40.673196ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 53.587776ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 44.366531ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 42.725243ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 51.266557ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+AVERAGE DELAY: 44.1675918ms
+AVERAGE WEI COST: 31,365,680,000,000,000
+AVERAGE GAS COST: 1,568,284
+Delay of function createDelivery(): 0s 89.012617ms
+Wei cost of function createDelivery():             22,446,099,999,997,950
+Gas cost of function createDelivery():                          1,122,305
+Delay of function createDelivery(): 0s 78.537764ms
+Wei cost of function createDelivery():             22,446,099,999,997,950
+Gas cost of function createDelivery():                          1,122,305
+Delay of function createDelivery(): 0s 81.125579ms
+Wei cost of function createDelivery():             22,446,099,999,997,950
+Gas cost of function createDelivery():                          1,122,305
+Delay of function createDelivery(): 0s 76.506303ms
+Wei cost of function createDelivery():             22,446,100,000,014,336
+Gas cost of function createDelivery():                          1,122,305
+Delay of function createDelivery(): 0s 80.77411ms
+Wei cost of function createDelivery():             22,446,099,999,997,950
+Gas cost of function createDelivery():                          1,122,305
+Delay of function createDelivery(): 0s 87.183862ms
+Wei cost of function createDelivery():             22,446,099,999,997,950
+Gas cost of function createDelivery():                          1,122,305
+Delay of function createDelivery(): 0s 101.32951ms
+Wei cost of function createDelivery():             22,446,099,999,997,950
+Gas cost of function createDelivery():                          1,122,305
+Delay of function createDelivery(): 0s 80.415773ms
+Wei cost of function createDelivery():             22,446,099,999,997,950
+Gas cost of function createDelivery():                          1,122,305
+Delay of function createDelivery(): 0s 75.488928ms
+Wei cost of function createDelivery():             22,446,099,999,997,950
+Gas cost of function createDelivery():                          1,122,305
+Delay of function createDelivery(): 0s 81.989539ms
+Wei cost of function createDelivery():             22,446,099,999,997,950
+Gas cost of function createDelivery():                          1,122,305
+AVERAGE DELAY: 83.2363985ms
+AVERAGE WEI COST: 22,446,099,999,999,590
+AVERAGE GAS COST: 1,122,305
+Delay of function accept(): 0s 45.620204ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 69.924222ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 39.958186ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 44.745922ms
+Wei cost of function accept():                954,219,999,985,664
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 43.239528ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 97.939778ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 45.918511ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 32.19817ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 31.097429ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 31.916345ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+AVERAGE DELAY: 48.2558295ms
+AVERAGE WEI COST: 954,220,000,000,409.6
+AVERAGE GAS COST: 47,711
+Delay of function finish(): 0s 47.754147ms
+Wei cost of function finish():              1,354,500,000,006,144
+Gas cost of function finish():                             67,725
+Delay of function finish(): 0s 69.71364ms
+Wei cost of function finish():              1,354,500,000,006,144
+Gas cost of function finish():                             67,725
+Delay of function finish(): 0s 61.591009ms
+Wei cost of function finish():              1,354,499,999,989,760
+Gas cost of function finish():                             67,725
+Delay of function finish(): 0s 59.683837ms
+Wei cost of function finish():              1,354,500,000,006,144
+Gas cost of function finish():                             67,725
+Delay of function finish(): 0s 63.572528ms
+Wei cost of function finish():              1,354,499,999,989,760
+Gas cost of function finish():                             67,725
+Delay of function finish(): 0s 58.665047ms
+Wei cost of function finish():              1,354,500,000,006,144
+Gas cost of function finish():                             67,725
+Delay of function finish(): 0s 57.786143ms
+Wei cost of function finish():              1,354,500,000,006,144
+Gas cost of function finish():                             67,725
+Delay of function finish(): 0s 59.572604ms
+Wei cost of function finish():              1,354,499,999,989,760
+Gas cost of function finish():                             67,725
+Delay of function finish(): 0s 65.99005ms
+Wei cost of function finish():              1,354,500,000,006,144
+Gas cost of function finish():                             67,725
+Delay of function finish(): 0s 63.712924ms
+Wei cost of function finish():              1,354,499,999,989,760
+Gas cost of function finish():                             67,725
+AVERAGE DELAY: 60.80419290000001ms
+AVERAGE WEI COST: 1,354,499,999,999,590.5
+AVERAGE GAS COST: 67,725
+
+For 10 receiver/s
+------------------------
+Delay of function deploy(): 0s 58.632104ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 34.632437ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 48.509108ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 36.620453ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 47.90806ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 42.22591ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 47.763148ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 38.806377ms
+Wei cost of function deploy():             31,365,679,999,991,810
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 59.818562ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+Delay of function deploy(): 0s 31.889074ms
+Wei cost of function deploy():             31,365,680,000,008,190
+Gas cost of function deploy():                          1,568,284
+AVERAGE DELAY: 44.6805233ms
+AVERAGE WEI COST: 31,365,680,000,001,640
+AVERAGE GAS COST: 1,568,284
+Delay of function createDelivery(): 0s 235.511165ms
+Wei cost of function createDelivery():             35,870,439,999,995,904
+Gas cost of function createDelivery():                          1,793,522
+Delay of function createDelivery(): 0s 196.48125ms
+Wei cost of function createDelivery():             35,870,439,999,995,904
+Gas cost of function createDelivery():                          1,793,522
+Delay of function createDelivery(): 0s 203.828634ms
+Wei cost of function createDelivery():             35,870,439,999,995,904
+Gas cost of function createDelivery():                          1,793,522
+Delay of function createDelivery(): 0s 198.858708ms
+Wei cost of function createDelivery():             35,870,440,000,012,290
+Gas cost of function createDelivery():                          1,793,522
+Delay of function createDelivery(): 0s 189.552435ms
+Wei cost of function createDelivery():             35,870,439,999,995,904
+Gas cost of function createDelivery():                          1,793,522
+Delay of function createDelivery(): 0s 196.224857ms
+Wei cost of function createDelivery():             35,870,439,999,995,904
+Gas cost of function createDelivery():                          1,793,522
+Delay of function createDelivery(): 0s 188.430662ms
+Wei cost of function createDelivery():             35,870,439,999,995,904
+Gas cost of function createDelivery():                          1,793,522
+Delay of function createDelivery(): 0s 201.009036ms
+Wei cost of function createDelivery():             35,870,440,000,012,290
+Gas cost of function createDelivery():                          1,793,522
+Delay of function createDelivery(): 0s 196.374652ms
+Wei cost of function createDelivery():             35,870,439,999,995,904
+Gas cost of function createDelivery():                          1,793,522
+Delay of function createDelivery(): 0s 195.168499ms
+Wei cost of function createDelivery():             35,870,439,999,995,904
+Gas cost of function createDelivery():                          1,793,522
+AVERAGE DELAY: 200.14398979999996ms
+AVERAGE WEI COST: 35,870,439,999,999,180
+AVERAGE GAS COST: 1,793,522
+Delay of function accept(): 0s 47.118557ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 31.737804ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 52.777437ms
+Wei cost of function accept():                954,219,999,985,664
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 34.864516ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 36.105035ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 52.317177ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 41.481316ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 43.51415ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 43.204185ms
+Wei cost of function accept():                954,220,000,002,048
+Gas cost of function accept():                             47,711
+Delay of function accept(): 0s 41.918777ms
+Wei cost of function accept():                954,219,999,985,664
+Gas cost of function accept():                             47,711
+AVERAGE DELAY: 42.503895400000005ms
+AVERAGE WEI COST: 954,219,999,998,771.2
+AVERAGE GAS COST: 47,711
+Delay of function finish(): 0s 99.415953ms
+Wei cost of function finish():              2,487,779,999,989,760
+Gas cost of function finish():                            124,389
+Delay of function finish(): 0s 114.782135ms
+Wei cost of function finish():              2,487,780,000,006,144
+Gas cost of function finish():                            124,389
+Delay of function finish(): 0s 111.246135ms
+Wei cost of function finish():              2,487,780,000,006,144
+Gas cost of function finish():                            124,389
+Delay of function finish(): 0s 117.196886ms
+Wei cost of function finish():              2,487,779,999,989,760
+Gas cost of function finish():                            124,389
+Delay of function finish(): 0s 108.416545ms
+Wei cost of function finish():              2,487,780,000,006,144
+Gas cost of function finish():                            124,389
+Delay of function finish(): 0s 107.098922ms
+Wei cost of function finish():              2,487,780,000,006,144
+Gas cost of function finish():                            124,389
+Delay of function finish(): 0s 109.301851ms
+Wei cost of function finish():              2,487,779,999,989,760
+Gas cost of function finish():                            124,389
+Delay of function finish(): 0s 113.515786ms
+Wei cost of function finish():              2,487,780,000,006,144
+Gas cost of function finish():                            124,389
+Delay of function finish(): 0s 132.803094ms
+Wei cost of function finish():              2,487,779,999,989,760
+Gas cost of function finish():                            124,389
+Delay of function finish(): 0s 105.831264ms
+Wei cost of function finish():              2,487,780,000,006,144
+Gas cost of function finish():                            124,389
+AVERAGE DELAY: 111.9608571ms
+AVERAGE WEI COST: 2,487,779,999,999,590.5
+AVERAGE GAS COST: 124,389

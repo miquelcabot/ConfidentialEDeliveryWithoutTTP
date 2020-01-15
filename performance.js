@@ -14,7 +14,7 @@ const compiledDeliveryNonConfPath = './contracts_NonConfidentialMultipartyRegist
 const compiledFactoryNonConf = require(compiledFactoryNonConfPath);
 const compiledDeliveryNonConf = require(compiledDeliveryNonConfPath);
 
-const NUMBER_BITS = 512;
+const NUMBER_BITS = 256;
 const MESSAGE = "Hola, com va tot?";
 
 let elgamal, p, g, q, xa, ya, r, messageSent, m1, m2;
