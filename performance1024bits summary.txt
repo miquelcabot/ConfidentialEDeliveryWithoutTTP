@@ -1,0 +1,93 @@
+ConfidentialMultipartyRegisteredEDeliveryWithoutTTP
+
+For 1 receiver/s
+------------------------
+deploy()                AVERAGE DELAY: 93,49799060000001
+                        AVERAGE WEI COST: 77292839999999180
+                        AVERAGE GAS COST: 3864642
+createDelivery()        AVERAGE DELAY: 218,55766489999996
+                        AVERAGE WEI COST: 61558500000001230
+                        AVERAGE GAS COST: 3077925
+accept()                AVERAGE DELAY: 141,8402402
+                        AVERAGE WEI COST: 11559760000000000
+                        AVERAGE GAS COST: 577988
+finish()                AVERAGE DELAY: 509,03777460000003
+                        AVERAGE WEI COST: 46866220000000410
+                        AVERAGE GAS COST: 2343311
+
+For 2 receiver/s
+------------------------
+deploy()                AVERAGE DELAY: 46,6315837
+                        AVERAGE WEI COST: 77292839999999180
+                        AVERAGE GAS COST: 3864642
+createDelivery()        AVERAGE DELAY: 196,72857050000002
+                        AVERAGE WEI COST: 63234640000000000
+                        AVERAGE GAS COST: 3161732
+accept()                AVERAGE DELAY: 128,1996345
+                        AVERAGE WEI COST: 11559760000000000
+                        AVERAGE GAS COST: 577988
+finish()                AVERAGE DELAY: 525,1463755
+                        AVERAGE WEI COST: 50643980000000410
+                        AVERAGE GAS COST: 2532199
+
+For 10 receiver/s
+------------------------
+deploy()                AVERAGE DELAY: 46,675201400000006
+                        AVERAGE WEI COST: 77292839999999180
+                        AVERAGE GAS COST: 3864642
+createDelivery()        AVERAGE DELAY: 297,9059126000001
+                        AVERAGE WEI COST: 76664160000000000
+                        AVERAGE GAS COST: 3833208
+accept()                AVERAGE DELAY: 132,2328303
+                        AVERAGE WEI COST: 11559760000000000
+                        AVERAGE GAS COST: 577988
+finish()                AVERAGE DELAY: 836,7276238000001
+                        AVERAGE WEI COST: 80866060000000420
+                        AVERAGE GAS COST: 4043303
+
+NonConfidentialMultipartyRegisteredEDelivery
+
+For 1 receiver/s
+------------------------
+deploy()                AVERAGE DELAY: 38,6885704
+                        AVERAGE WEI COST: 31365680000000000
+                        AVERAGE GAS COST: 1568284
+createDelivery()        AVERAGE DELAY: 70,6421444
+                        AVERAGE WEI COST: 20768040000000820
+                        AVERAGE GAS COST: 1038402
+accept()                AVERAGE DELAY: 45,1591224
+                        AVERAGE WEI COST: 954220000000409,6
+                        AVERAGE GAS COST: 47711
+finish()                AVERAGE DELAY: 52,052784200000005
+                        AVERAGE WEI COST: 1212839999999180,8
+                        AVERAGE GAS COST: 60642
+
+For 2 receiver/s
+------------------------
+deploy()                AVERAGE DELAY: 40,3294772
+                        AVERAGE WEI COST: 31365680000000000
+                        AVERAGE GAS COST: 1568284
+createDelivery()        AVERAGE DELAY: 84,0908138
+                        AVERAGE WEI COST: 22446099999999590
+                        AVERAGE GAS COST: 1122305
+accept()                AVERAGE DELAY: 40,1095286
+                        AVERAGE WEI COST: 954219999998771,2
+                        AVERAGE GAS COST: 47711
+finish()                AVERAGE DELAY: 59,60076240000001
+                        AVERAGE WEI COST: 1354499999999590,5
+                        AVERAGE GAS COST: 67725
+
+For 10 receiver/s
+------------------------
+deploy()                AVERAGE DELAY: 38,6736694
+                        AVERAGE WEI COST: 31365680000001640
+                        AVERAGE GAS COST: 1568284
+createDelivery()        AVERAGE DELAY: 208,38989750000002
+                        AVERAGE WEI COST: 35870439999999180
+                        AVERAGE GAS COST: 1793522
+accept()                AVERAGE DELAY: 38,07367140000001
+                        AVERAGE WEI COST: 954220000000409,6
+                        AVERAGE GAS COST: 47711
+finish()                AVERAGE DELAY: 107,6158647
+                        AVERAGE WEI COST: 2487779999999590,5
+                        AVERAGE GAS COST: 124389
