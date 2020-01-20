@@ -1097,8 +1097,6 @@ contract ConfidentialMultipartyRegisteredEDeliveryWithoutTTP {
         sender.transfer(this.balance); // Sender receives the refund of the deposit
         // We set the state of every receiver with 'accepted' state to 'finished'
         for (uint i = 0; i<receivers.length; i++) {
-            
-            // TODO: Falta assignar un w per cada B'
             receiversState[receivers[i]].w = _w;
 
             if (receiversState[receivers[i]].state == State.accepted) {
