@@ -11,6 +11,7 @@
     "compile": "node compile.js",
     "deploy": "node deploy.js",
     "performance": "node performance.js",
+    "performanceUIB": "node performanceUIB.js",
     "test": "mocha"
   },
   "repository": {
