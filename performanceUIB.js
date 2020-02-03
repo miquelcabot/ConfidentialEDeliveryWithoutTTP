@@ -1,7 +1,8 @@
 const ganache = require('ganache-cli');
 const Web3 = require('web3');
+let net = require('net');
 
-var web3 = new Web3('ws://130.206.32.22:3000');
+let web3 = new Web3('/home/ether/data/geth.ipc', net); // mac os path
 
 //const web3 = new Web3(ganache.provider());
 const ElGamal = require('elgamal');
