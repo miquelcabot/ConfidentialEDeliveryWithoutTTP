@@ -1,10 +1,12 @@
-const ganache = require('ganache-cli');
+const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
-let net = require('net');
 
-let web3 = new Web3('/home/ether/data/geth.ipc', net); // mac os path
+const provider = new HDWalletProvider(
+    'tragic square news business dad cricket nurse athlete tide split about ring',
+    'https://rinkeby.infura.io/6Fb0b6c4nUVQBb8qAKcx'
+);
+const web3 = new Web3(provider);
 
-//const web3 = new Web3(ganache.provider());
 const ElGamal = require('elgamal');
 const bigInt = require("big-integer");
 
@@ -85,7 +87,7 @@ const testPerformance = async (numberReceivers, repetitions) => {
     // Add n receivers to the array of receivers
     let arrayReceivers = [];
     for (let i = 1; i<=numberReceivers; i++) {
-        arrayReceivers.push(accounts[i%1]);    // i%1 --> There are only 1 addresses.
+        arrayReceivers.push(accounts[i%10]);    // i%10 --> There are only 10 addresses.
     }
 
     console.log('');
@@ -182,7 +184,7 @@ const testPerformanceNonConf = async (numberReceivers, repetitions) => {
     // Add n receivers to the array of receivers
     let arrayReceivers = [];
     for (let i = 1; i<=numberReceivers; i++) {
-        arrayReceivers.push(accounts[i%1]);    // i%1 --> There are only 1 addresses.
+        arrayReceivers.push(accounts[i%10]);    // i%10 --> There are only 10 addresses.
     }
 
     console.log('');

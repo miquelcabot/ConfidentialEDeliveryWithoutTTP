@@ -12,6 +12,7 @@
     "deploy": "node deploy.js",
     "performance": "node performance.js",
     "performanceUIB": "node performanceUIB.js",
+    "performanceRinkeby": "node performanceRinkeby.js",
     "test": "mocha"
   },
   "repository": {
