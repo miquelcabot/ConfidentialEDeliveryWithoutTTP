@@ -17,7 +17,7 @@ const compiledDeliveryNonConf = require(compiledDeliveryNonConfPath);
 const NUMBER_BITS = 256;
 const MESSAGE = "Hola, com va tot?";
 
-let elgamal, p, g, q, xa, ya, r, messageSent, m1, m2;
+let elgamal, p, g, q, xa, ya, r, messageSent, c1, c2;
 let c, s, xb, yb, z1, z2;
 let w;
 
@@ -110,7 +110,7 @@ const testPerformance = async (numberReceivers, repetitions) => {
         await performance(
             async () => {
                 return await factoryContract[i].methods
-                    .createDelivery(arrayReceivers, "0x"+m1.toString(16), "0x"+m2.toString(16), "0x"+ya.toString(16), "0x"+g.toString(16), "0x"+p.toString(16), 600, 1200)
+                    .createDelivery(arrayReceivers, "0x"+c1.toString(16), "0x"+c2.toString(16), "0x"+ya.toString(16), "0x"+g.toString(16), "0x"+p.toString(16), 600, 1200)
                     .send({ from: accounts[0], gas: '6000000', value: '1' });
             },
             'createDelivery',
@@ -280,11 +280,11 @@ const init = async (repetitions) => {
     let messageSentBuffer = Buffer.from(MESSAGE, 'utf8');
     messageSent = bigInt(messageSentBuffer.toString('hex'), 16);
 
-    // Generation of M1 = g^r mod p
-    m1 = g.modPow(r, p);
+    // Generation of C1 = g^r mod p
+    c1 = g.modPow(r, p);
 
-    // Generation of M2 = m·ya^r mod p
-    m2 = messageSent.multiply(ya.modPow(r, p));
+    // Generation of C2 = m·ya^r mod p
+    c2 = messageSent.multiply(ya.modPow(r, p));
 
     // VARIABLES FOR ACCEPT()
     // Generation of challenge number c

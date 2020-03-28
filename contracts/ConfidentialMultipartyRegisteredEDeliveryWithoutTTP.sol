@@ -917,9 +917,9 @@ contract ConfidentialMultipartyRegisteredEDeliveryWithoutTTPFactory {
     mapping(address => address[]) public receiverDeliveries;
     address[] public deliveries;
 
-    function createDelivery(address[] _receivers, bytes _m1, bytes _m2, bytes _ya, bytes _g, bytes _p, uint _term1, uint _term2) public payable {
+    function createDelivery(address[] _receivers, bytes _c1, bytes _c2, bytes _ya, bytes _g, bytes _p, uint _term1, uint _term2) public payable {
         address newDelivery = (new ConfidentialMultipartyRegisteredEDeliveryWithoutTTP)
-            .value(msg.value)(msg.sender, _receivers, _m1, _m2, _ya, _g, _p, _term1, _term2);
+            .value(msg.value)(msg.sender, _receivers, _c1, _c2, _ya, _g, _p, _term1, _term2);
         deliveries.push(newDelivery);
         senderDeliveries[msg.sender].push(newDelivery);
         for (uint i = 0; i<_receivers.length; i++) {
@@ -974,8 +974,8 @@ contract ConfidentialMultipartyRegisteredEDeliveryWithoutTTP {
     uint acceptedReceivers;
 
     // Message
-    bytes public m1;
-    bytes public m2;
+    bytes public c1;
+    bytes public c2;
     bytes public ya;
     bytes public g;
     bytes public p;
@@ -987,7 +987,7 @@ contract ConfidentialMultipartyRegisteredEDeliveryWithoutTTP {
     uint public start;
 
     // Constructor funcion to create the delivery
-    constructor (address _sender, address[] _receivers, bytes _m1, bytes _m2, bytes _ya, bytes _g, bytes _p, uint _term1, uint _term2) public payable {
+    constructor (address _sender, address[] _receivers, bytes _c1, bytes _c2, bytes _ya, bytes _g, bytes _p, uint _term1, uint _term2) public payable {
         // Requires that the sender send a deposit of minimum 1 wei (>0 wei)
         require(msg.value>0, "Sender has to send a deposit of minimun 1 wei");
         require(_term1 < _term2, "Timeout term2 must be greater than _term1");
@@ -998,8 +998,8 @@ contract ConfidentialMultipartyRegisteredEDeliveryWithoutTTP {
             receiversState[receivers[i]].state = State.created;
         }
         acceptedReceivers = 0;
-        m1 = _m1;
-        m2 = _m2;
+        c1 = _c1;
+        c2 = _c2;
         ya = _ya;
         g = _g;
         p = _p;
@@ -1089,8 +1089,8 @@ contract ConfidentialMultipartyRegisteredEDeliveryWithoutTTP {
 
         // g^w mod p
         bytes memory check_1 = bignumber_modexp(g, _w, p);
-        // (m1·(yb^c mod p)) mod p
-        bytes memory check_2 = bignumber_modmul( m1 , bignumber_modexp(receiversState[_receiver].yb, receiversState[_receiver].c, p), p);
+        // (c1·(yb^c mod p)) mod p
+        bytes memory check_2 = bignumber_modmul( c1 , bignumber_modexp(receiversState[_receiver].yb, receiversState[_receiver].c, p), p);
 
         require (bignumber_equals(check_1, check_2), "(g^w mod p) and (((g^r mod p)·(yb^c mod p)) mod p) are not equals");
 

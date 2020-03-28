@@ -18,7 +18,7 @@ let accounts;
 const NUMBER_BITS = 512;
 const MESSAGE = "Hola, com va tot?";
 
-let elgamal, p, g, q, xa, ya, r, messageSent, m1, m2;
+let elgamal, p, g, q, xa, ya, r, messageSent, c1, c2;
 let c, s, xb, yb, z1, z2;
 let w;
 
@@ -44,11 +44,11 @@ beforeEach(async () => {
   let messageSentBuffer = Buffer.from(MESSAGE, 'utf8');
   messageSent = bigInt(messageSentBuffer.toString('hex'), 16);
 
-  // Generation of M1 = g^r mod p
-  m1 = g.modPow(r, p);
+  // Generation of C1 = g^r mod p
+  c1 = g.modPow(r, p);
 
-  // Generation of M2 = m·ya^r mod p
-  m2 = messageSent.multiply(ya.modPow(r, p));
+  // Generation of C2 = m·ya^r mod p
+  c2 = messageSent.multiply(ya.modPow(r, p));
 
   // VARIABLES FOR ACCEPT()
   // Generation of challenge number c
@@ -78,7 +78,7 @@ beforeEach(async () => {
     .send({ from: accounts[0], gas: '6000000' });
 
   await factoryContract.methods
-    .createDelivery([accounts[1],accounts[2]], "0x"+m1.toString(16), "0x"+m2.toString(16), "0x"+ya.toString(16), "0x"+g.toString(16), "0x"+p.toString(16), 600, 1200)
+    .createDelivery([accounts[1],accounts[2]], "0x"+c1.toString(16), "0x"+c2.toString(16), "0x"+ya.toString(16), "0x"+g.toString(16), "0x"+p.toString(16), 600, 1200)
     .send({ from: accounts[0], gas: '6000000', value: '100' });
 
   const addresses = await factoryContract.methods.getDeliveries().call();
@@ -154,14 +154,14 @@ describe('Certified eDelivery Contract', () => {
       .finish(accounts[1], "0x"+w.toString(16))
       .send({ from: accounts[0], gas: '6000000' });
 
-    let _m2 = bigInt((await deliveryContract.methods.m2().call()).substr(2), 16);
+    let _c2 = bigInt((await deliveryContract.methods.c2().call()).substr(2), 16);
     let _ya = bigInt((await deliveryContract.methods.ya().call()).substr(2), 16);
     let _p = bigInt((await deliveryContract.methods.p().call()).substr(2), 16);
     let _w = bigInt((await deliveryContract.methods.getW(accounts[1]).call()).substr(2), 16);
 
     let _r = _w.subtract(c.multiply(xb.mod(_p)));  // r = w-c*xb mod q
 
-    const messageReceived = _m2.divide(_ya.modPow(_r, _p));
+    const messageReceived = _c2.divide(_ya.modPow(_r, _p));
     const messageReceivedBuffer = Buffer.from(messageReceived.toString(16), 'hex');
     assert.equal(messageReceivedBuffer, MESSAGE);
   });
