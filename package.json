@@ -1,23 +1,27 @@
 {
-  "name": "confidentialMultipartyRegisteredEDeliveryWithoutTTP",
+  "name": "PatentConfidentialEDeliveryWithoutTTP",
   "version": "1.0.0",
-  "description": "Confidential Multiparty Registered eDelivery contract for Ethereum with Factory without TTP",
+  "description": "Protocol pel 2n article de IEEE Access (eDelivery confidencial multipart sense TTP) per la patent, amb interfície web ReactJS",
+  "homepage": "https://secomuib.github.io/PatentConfidentialEDeliveryWithoutTTP/",
   "main": "start.js",
   "directories": {
     "doc": "doc",
     "test": "test"
   },
   "scripts": {
-    "compile": "node compile.js",
-    "deploy": "node deploy.js",
-    "performance": "node performance.js",
-    "performanceUIB": "node performanceUIB.js",
-    "performanceRinkeby": "node performanceRinkeby.js",
-    "test": "mocha"
+    "ethereum_compile": "node compile.js",
+    "ethereum_deploy": "node deploy.js",
+    "ethereum_test": "mocha",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/secomuib/ConfidentialMultipartyRegisteredEDeliveryWithoutTTP.git"
+    "url": "git+https://github.com/secomuib/PatentConfidentialEDeliveryWithoutTTP.git"
   },
   "keywords": [
     "ethereum",
@@ -27,17 +31,24 @@
   "author": "Seguretat i comerç electrònic (SECOM)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/secomuib/ConfidentialMultipartyRegisteredEDeliveryWithoutTTP/issues"
+    "url": "https://github.com/secomuib/PatentConfidentialEDeliveryWithoutTTP/issues"
   },
-  "homepage": "https://github.com/secomuib/ConfidentialMultipartyRegisteredEDeliveryWithoutTTP#readme",
+  "private": true,
   "dependencies": {
     "big-integer": "^1.6.43",
     "elgamal": "^0.3.0",
-    "fs-extra": "6.0.1",
-    "ganache-cli": "6.1.3",
-    "mocha": "5.2.0",
-    "solc": "0.4.25",
+    "fs-extra": "^6.0.1",
+    "ganache-cli": "^6.0.3",
+    "gh-pages": "^1.2.0",
+    "mocha": "^5.0.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "semantic-ui-css": "^2.3.3",
+    "semantic-ui-react": "^0.81.3",
+    "solc": "^0.4.20",
     "truffle-hdwallet-provider": "0.0.3",
-    "web3": "1.0.0-beta.26"
+    "web3": "^1.0.0-beta.26"
   }
 }

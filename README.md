@@ -11,20 +11,15 @@ npm install
 ## Execution
 To compile the smart contract:
 ```
-npm run compile
+npm run ethereum_compile
 ```
 
 To deploy to Rinkeby test network:
 ```
-npm run deploy
+npm run ethereum_deploy
 ```
 
 To execute test:
 ```
-npm run test
-```
-
-To execute performance analysis:
-```
-npm run performance
+npm run ethereum_test
 ```
