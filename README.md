@@ -23,3 +23,13 @@ To execute test:
 ```
 npm run ethereum_test
 ```
+
+To deploy to GitHub Pages:
+```
+gh-pages -d build
+```
+
+To start React JS development server:
+```
+react-scripts start
+```
