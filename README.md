@@ -26,10 +26,10 @@ npm run ethereum_test
 
 To deploy to GitHub Pages:
 ```
-gh-pages -d build
+npm run deploy
 ```
 
 To start React JS development server:
 ```
-react-scripts start
+npm run start
 ```
