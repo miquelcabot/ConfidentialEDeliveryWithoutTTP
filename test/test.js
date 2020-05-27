@@ -5,8 +5,8 @@ const web3 = new Web3(ganache.provider());
 const ElGamal = require('elgamal');
 const bigInt = require("big-integer");
 
-const compiledFactoryPath = '../contracts/build/ConfidentialMultipartyRegisteredEDeliveryWithoutTTPFactory.json';
-const compiledDeliveryPath = '../contracts/build/ConfidentialMultipartyRegisteredEDeliveryWithoutTTP.json';
+const compiledFactoryPath = '../src/ethereum/build/ConfidentialMultipartyRegisteredEDeliveryWithoutTTPFactory.json';
+const compiledDeliveryPath = '../src/ethereum/build/ConfidentialMultipartyRegisteredEDeliveryWithoutTTP.json';
 const compiledFactory = require(compiledFactoryPath);
 const compiledDelivery = require(compiledDeliveryPath);
 

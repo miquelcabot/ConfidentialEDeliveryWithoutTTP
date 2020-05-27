@@ -4,7 +4,7 @@ const solc = require("solc");
 
 const CONTRACT_FILE_NAME = "ConfidentialMultipartyRegisteredEDeliveryWithoutTTP";
 
-const buildPath = path.resolve(__dirname, "contracts/build");
+const buildPath = path.resolve(__dirname, "src/ethereum/build");
 var contractPath = path.resolve(__dirname, "contracts", CONTRACT_FILE_NAME+".sol");
 var contractSource = fs.readFileSync(contractPath, "utf8");
 
