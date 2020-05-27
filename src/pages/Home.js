@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Icon, Button, Dimmer, Loader, Segment, Table } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import factory from '../ethereum/factory';
-import notification from '../ethereum/notification';
 import web3 from '../ethereum/web3';
 import NotificationRow from '../components/NotificationRow';
 
@@ -16,16 +15,14 @@ class Home extends Component {
     componentDidMount = async () => {
         try {
             const accounts = await web3.eth.getAccounts();
-            const senderNotificationsCount = await factory.methods.getSenderNotificationsCount(accounts[0]).call();
-            const receiverNotificationsCount = await factory.methods.getReceiverNotificationsCount(accounts[0]).call();
-            //const senderNotifications = await factory.methods.getSenderNotifications(accounts[0]).call();
-            //const receiverNotifications = await factory.methods.getReceiverNotifications(accounts[0]).call();
+            const senderNotificationsCount = await factory.methods.getSenderDeliveriesCount(accounts[0]).call();
+            const receiverNotificationsCount = await factory.methods.getReceiverDeliveriesCount(accounts[0]).call();
 
             const senderNotifications = await Promise.all(
                 Array(parseInt(senderNotificationsCount))
                   .fill()
                   .map((notification, index) => {
-                    return factory.methods.senderNotifications(accounts[0], index).call();
+                    return factory.methods.senderDeliveries(accounts[0], index).call();
                   })
               );
 
@@ -33,7 +30,7 @@ class Home extends Component {
                 Array(parseInt(receiverNotificationsCount))
                   .fill()
                   .map((notification, index) => {
-                    return factory.methods.receiverNotifications(accounts[0], index).call();
+                    return factory.methods.receiverDeliveries(accounts[0], index).call();
                   })
               );
 

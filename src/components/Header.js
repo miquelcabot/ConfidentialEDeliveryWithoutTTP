@@ -6,7 +6,7 @@ export default () => {
     return (
         <Menu stackable style={{ marginTop: '10px' }}>
             <Menu.Item as={Link} to='/'>
-                Confidential Registered eDeliveries
+                Confidential Multiparty Registered eDelivery without TTP
             </Menu.Item>
             <Menu.Menu position="right">
                 <Menu.Item as={Link} to='/'>

@@ -1,5 +1,5 @@
-# ConfidentialMultipartyRegisteredEDeliveryWithoutTTP
-Confidential Multiparty Registered eDelivery contract for Ethereum with Factory without TTP
+# PatentConfidentialEDeliveryWithoutTTP
+Protocol pel 2n article de IEEE Access (eDelivery confidencial multipart sense TTP) per la patent, amb interfície web ReactJS
 
 ## Requirements
 Requirements: [Node 8.0](https://nodejs.org/en/download/).
