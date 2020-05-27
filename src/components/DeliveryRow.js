@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Table, Button } from 'semantic-ui-react';
 //import Campaign from '../ethereum/campaign';
 
-class NotificationRow extends Component {
+class DeliveryRow extends Component {
   onView = async () => {
     /*const campaign = Campaign(this.props.address);
 
@@ -16,10 +16,10 @@ class NotificationRow extends Component {
       return (
           <Table.Row>
               <Table.Cell>{this.props.id+1}</Table.Cell>
-              <Table.Cell>{this.props.notification}</Table.Cell>
-              <Table.Cell>{this.props.notification.account}</Table.Cell>
-              <Table.Cell>{this.props.notification.timestamp}</Table.Cell>
-              <Table.Cell>{this.props.notification.state}</Table.Cell>
+              <Table.Cell>{this.props.delivery}</Table.Cell>
+              <Table.Cell>{this.props.delivery.account}</Table.Cell>
+              <Table.Cell>{this.props.delivery.timestamp}</Table.Cell>
+              <Table.Cell>{this.props.delivery.state}</Table.Cell>
               <Table.Cell>
                   <Button basic color='blue' onClick={this.onView}>
                       View
@@ -30,4 +30,4 @@ class NotificationRow extends Component {
     }
 }
 
-export default NotificationRow;
+export default DeliveryRow;

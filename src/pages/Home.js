@@ -3,7 +3,7 @@ import { Icon, Button, Dimmer, Loader, Segment, Table } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import factory from '../ethereum/factory';
 import web3 from '../ethereum/web3';
-import NotificationRow from '../components/NotificationRow';
+import DeliveryRow from '../components/DeliveryRow';
 
 class Home extends Component {
     state = {
@@ -15,47 +15,47 @@ class Home extends Component {
     componentDidMount = async () => {
         try {
             const accounts = await web3.eth.getAccounts();
-            const senderNotificationsCount = await factory.methods.getSenderDeliveriesCount(accounts[0]).call();
-            const receiverNotificationsCount = await factory.methods.getReceiverDeliveriesCount(accounts[0]).call();
+            const senderDeliveriesCount = await factory.methods.getSenderDeliveriesCount(accounts[0]).call();
+            const receiverDeliveriesCount = await factory.methods.getReceiverDeliveriesCount(accounts[0]).call();
 
-            const senderNotifications = await Promise.all(
-                Array(parseInt(senderNotificationsCount))
+            const senderDeliveries = await Promise.all(
+                Array(parseInt(senderDeliveriesCount))
                   .fill()
-                  .map((notification, index) => {
+                  .map((delivery, index) => {
                     return factory.methods.senderDeliveries(accounts[0], index).call();
                   })
               );
 
-              const receiverNotifications = await Promise.all(
-                Array(parseInt(receiverNotificationsCount))
+              const receiverDeliveries = await Promise.all(
+                Array(parseInt(receiverDeliveriesCount))
                   .fill()
-                  .map((notification, index) => {
+                  .map((delivery, index) => {
                     return factory.methods.receiverDeliveries(accounts[0], index).call();
                   })
               );
 
             this.setState({ 
-                senderNotifications: senderNotifications, 
-                receiverNotifications: receiverNotifications 
+                senderDeliveries: senderDeliveries, 
+                receiverDeliveries: receiverDeliveries 
             });
         } finally {
             this.setState({ loadingPage: false })
         }
     }
 
-    renderNotificationRows(sent) {
-        var notifications;
+    renderDeliveryRows(sent) {
+        var deliveries;
         if (sent) {
-            notifications = this.state.senderNotifications;
+            deliveries = this.state.senderDeliveries;
         } else {
-            notifications = this.state.receiverNotifications;
+            deliveries = this.state.receiverDeliveries;
         }
-        return notifications.map((notification, index) => {
+        return deliveries.map((delivery, index) => {
             return (
-                <NotificationRow
+                <DeliveryRow
                     key={index}
                     id={index}
-                    notification={notification}
+                    delivery={delivery}
                 />
             );
         });
@@ -76,7 +76,7 @@ class Home extends Component {
         // Done
         return (
             <div>
-                <h3><Icon name='sign in alternate' circular />&nbsp;Received notifications</h3>
+                <h3><Icon name='sign in alternate' circular />&nbsp;Received deliveries</h3>
                 <Table fixed>
                     <Table.Header>
                         <Table.Row>
@@ -88,9 +88,9 @@ class Home extends Component {
                             <Table.HeaderCell>View</Table.HeaderCell>
                         </Table.Row>
                     </Table.Header>
-                    <Table.Body>{this.renderNotificationRows(false)}</Table.Body>
+                    <Table.Body>{this.renderDeliveryRows(false)}</Table.Body>
                 </Table>
-                <h3><Icon name='sign out alternate' circular />&nbsp;Sent notifications</h3>
+                <h3><Icon name='sign out alternate' circular />&nbsp;Sent deliveries</h3>
                 <Table>
                     <Table.Header>
                         <Table.Row>
@@ -102,11 +102,11 @@ class Home extends Component {
                             <Table.HeaderCell>View</Table.HeaderCell>
                         </Table.Row>
                     </Table.Header>
-                    <Table.Body>{this.renderNotificationRows(true)}</Table.Body>
+                    <Table.Body>{this.renderDeliveryRows(true)}</Table.Body>
                 </Table>
-                <Link to="/notifications/new">
+                <Link to="/deliveries/new">
                     <Button
-                        content = "Send New Notification"
+                        content = "Send New Delivery"
                         icon = "add circle"
                         primary = {true}
                         />

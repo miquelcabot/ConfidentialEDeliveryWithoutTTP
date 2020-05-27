@@ -10,9 +10,9 @@ export default () => {
             </Menu.Item>
             <Menu.Menu position="right">
                 <Menu.Item as={Link} to='/'>
-                    Notifications
+                    Deliveries
                 </Menu.Item>
-                <Menu.Item as={Link} to='/notifications/new'>
+                <Menu.Item as={Link} to='/deliveries/new'>
                     +
                 </Menu.Item>
             </Menu.Menu>

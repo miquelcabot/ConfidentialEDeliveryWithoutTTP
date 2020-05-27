@@ -4,7 +4,7 @@ import { Form, Button, Message, Input } from 'semantic-ui-react';
 import factory from '../ethereum/factory';
 import web3 from '../ethereum/web3';
 
-class NotificationNew extends Component {
+class DeliveryNew extends Component {
   state = {
     receiver: '',
     message: '',
@@ -22,7 +22,7 @@ class NotificationNew extends Component {
     try {
         const accounts = await web3.eth.getAccounts();
         await factory.methods
-            .createNotification(this.state.receiver, web3.utils.keccak256(this.state.message), this.state.term)
+            .createDelivery(this.state.receiver, web3.utils.keccak256(this.state.message), this.state.term)
             .send({ from: accounts[0], value: this.state.deposit });
 
         // Refresh, using withRouter
@@ -39,7 +39,7 @@ class NotificationNew extends Component {
     return (
       <div>
         <Link to='/'>Back</Link>
-        <h3>Send New Notification</h3>
+        <h3>Send New Delivery</h3>
         <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
           <Form.Field>
             <label>Receiver</label>
@@ -87,4 +87,4 @@ class NotificationNew extends Component {
   }
 }
 
-export default withRouter(NotificationNew);
+export default withRouter(DeliveryNew);
