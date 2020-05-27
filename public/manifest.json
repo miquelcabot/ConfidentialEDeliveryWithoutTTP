@@ -1,6 +1,6 @@
 {
-  "short_name": "NonConfidentialNotification",
-  "name": "Non Confidential Notification App with ReactJS",
+  "short_name": "ConfidentialEDeliveryWithoutTTP",
+  "name": "Confidential Multiparty Registered eDelivery without TTP",
   "icons": [
     {
       "src": "favicon.ico",
