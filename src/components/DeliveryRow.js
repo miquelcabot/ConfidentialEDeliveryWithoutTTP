@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Table, Button, Icon, Message } from 'semantic-ui-react';
+import { Table, Button, Icon, Message, Label } from 'semantic-ui-react';
 import web3 from '../ethereum/web3';
 import notification from '../ethereum/notification';
 import variables from '../ethereum/variables';
@@ -135,7 +135,24 @@ class DeliveryRow extends Component {
               <Table.Cell>{this.props.delivery}</Table.Cell>
               <Table.Cell>{this.state.receiver}</Table.Cell>
               <Table.Cell>{this.state.start}</Table.Cell>
-              <Table.Cell>{this.state.state}</Table.Cell>
+              <Table.Cell>
+                {
+                 this.state.state==='finished'? 
+                   (
+                    <Label as='a' color='teal' horizontal>Finished</Label>
+                   ) : (
+                    this.state.state==='accepted'? (
+                      <Label as='a' color='yellow' horizontal>Accepted</Label>
+                    ) : (
+                      this.state.state==='created'? (
+                        <Label as='a' horizontal>Created</Label>
+                      ) : (
+                        <Label as='a' horizontal>-</Label>
+                      )
+                    )
+                   )
+                 }
+              </Table.Cell>
               <Table.Cell>
                   {
                     this.props.sent ? (

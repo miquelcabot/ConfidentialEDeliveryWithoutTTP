@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from "react-router-dom";
-import { Form, Button, Message, Input, Dimmer, Loader } from 'semantic-ui-react';
+import { Form, Button, Message, Input, Dimmer, Loader, Label } from 'semantic-ui-react';
 import notification from '../ethereum/notification';
 import web3 from '../ethereum/web3';
 import variables from '../ethereum/variables';
@@ -71,7 +71,6 @@ class DeliveryShow extends Component {
       // Calcular MESSAGE
       if (w) {
         // kkkk TODO: El sender no té Xb
-        
         let xb = bigInt(variables.xb.substr(2), 16);
 
         let wBig = bigInt(w.substr(2), 16);
@@ -85,7 +84,6 @@ class DeliveryShow extends Component {
         const messageReceived = c2Big.divide(yaBig.modPow(r, pBig));
         message = Buffer.from(messageReceived.toString(16), 'hex');
       }
-      
 
       this.setState({ 
         address: address,
@@ -157,10 +155,22 @@ class DeliveryShow extends Component {
 
           <Form.Field>
             <label>State</label>
-            <Input
-              readOnly
-              value={this.state.state}
-            />
+            {
+              this.state.state==='finished'? 
+              (
+              < Label as='a' color='teal' horizontal>Finished</Label>
+              ) : (
+                this.state.state==='accepted'? (
+                  <Label as='a' color='yellow' horizontal>Accepted</Label>
+                ) : (
+                  this.state.state==='created'? (
+                    <Label as='a' horizontal>Created</Label>
+                  ) : (
+                    <Label as='a' horizontal>-</Label>
+                  )
+                )
+              )
+            }
           </Form.Field>
 
           <Form.Field>
