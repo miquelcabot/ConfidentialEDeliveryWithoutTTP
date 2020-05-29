@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/PatentConfidentialEDeliveryWithoutTTP/static/js/main.4e16c504.chunk.js",
+    "main.js.map": "/PatentConfidentialEDeliveryWithoutTTP/static/js/main.4e16c504.chunk.js.map",
+    "runtime-main.js": "/PatentConfidentialEDeliveryWithoutTTP/static/js/runtime-main.1b69e88a.js",
+    "runtime-main.js.map": "/PatentConfidentialEDeliveryWithoutTTP/static/js/runtime-main.1b69e88a.js.map",
+    "static/css/2.8df2c72d.chunk.css": "/PatentConfidentialEDeliveryWithoutTTP/static/css/2.8df2c72d.chunk.css",
+    "static/js/2.7797a806.chunk.js": "/PatentConfidentialEDeliveryWithoutTTP/static/js/2.7797a806.chunk.js",
+    "static/js/2.7797a806.chunk.js.map": "/PatentConfidentialEDeliveryWithoutTTP/static/js/2.7797a806.chunk.js.map",
+    "index.html": "/PatentConfidentialEDeliveryWithoutTTP/index.html",
+    "precache-manifest.aacf1e6a4843fd03b109cdeff785d0ae.js": "/PatentConfidentialEDeliveryWithoutTTP/precache-manifest.aacf1e6a4843fd03b109cdeff785d0ae.js",
+    "service-worker.js": "/PatentConfidentialEDeliveryWithoutTTP/service-worker.js",
+    "static/css/2.8df2c72d.chunk.css.map": "/PatentConfidentialEDeliveryWithoutTTP/static/css/2.8df2c72d.chunk.css.map",
+    "static/js/2.7797a806.chunk.js.LICENSE.txt": "/PatentConfidentialEDeliveryWithoutTTP/static/js/2.7797a806.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/PatentConfidentialEDeliveryWithoutTTP/static/media/outline-icons.ef60a4f6.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b69e88a.js",
+    "static/css/2.8df2c72d.chunk.css",
+    "static/js/2.7797a806.chunk.js",
+    "static/js/main.4e16c504.chunk.js"
+  ]
+}
