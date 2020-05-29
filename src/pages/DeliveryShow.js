@@ -117,7 +117,7 @@ class DeliveryShow extends Component {
           </Form.Field>
 
           <Form.Field>
-            <label>Sende</label>
+            <label>Sender</label>
             <Input
               readOnly
               value={this.state.sender}
@@ -173,7 +173,7 @@ class DeliveryShow extends Component {
           </Form.Field>
 
           <Form.Field>
-            <label>ya public key of A, ya = g^xa mod p</label>
+            <label>ya, public key of A, ya = g^xa mod p</label>
             <Input
               readOnly
               value={this.state.ya}
@@ -209,7 +209,7 @@ class DeliveryShow extends Component {
           </Form.Field>
 
           <Form.Field>
-            <label>z1</label>
+            <label>z1 = g^s mod p</label>
             <Input
               readOnly
               value={this.state.z1}
@@ -217,7 +217,7 @@ class DeliveryShow extends Component {
           </Form.Field>
 
           <Form.Field>
-            <label>z2</label>
+            <label>z2 = xb·ya^s mod p</label>
             <Input
               readOnly
               value={this.state.z2}
@@ -225,7 +225,7 @@ class DeliveryShow extends Component {
           </Form.Field>
 
           <Form.Field>
-            <label>yb</label>
+            <label>yb, public key of B, yb = g^xb mod p</label>
             <Input
               readOnly
               value={this.state.yb}
@@ -233,7 +233,7 @@ class DeliveryShow extends Component {
           </Form.Field>
 
           <Form.Field>
-            <label>c</label>
+            <label>c (challenge number)</label>
             <Input
               readOnly
               value={this.state.c}
@@ -241,7 +241,7 @@ class DeliveryShow extends Component {
           </Form.Field>
 
           <Form.Field>
-            <label>w</label>
+            <label>w = r.add(c.mod(p).multiply(xb.mod(p)).mod(p))</label>
             <Input
               readOnly
               value={this.state.w}
