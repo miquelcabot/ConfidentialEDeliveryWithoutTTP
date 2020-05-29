@@ -55,6 +55,7 @@ class DeliveryRow extends Component {
       const accounts = await web3.eth.getAccounts();
 
       // q of ElGamal algorithm
+      // kkkk TODO: Com ho podem saber?
       let q = bigInt(variables.q.substr(2), 16)
 
       let p = bigInt((await deliveryContract.methods.p().call()).substr(2), 16);
@@ -114,7 +115,14 @@ class DeliveryRow extends Component {
 
       // VARIABLES FOR FINISH()
       //const w = r.add(c.mod(p).multiply(xb.mod(p)).mod(p));
+      
       w =  r.add(c.multiply(xb.mod(p)));
+
+      console.log("r = 0x"+r.toString(16));
+      console.log("c = 0x"+c.toString(16));
+      console.log("xb = 0x"+xb.toString(16));
+      console.log("p = 0x"+p.toString(16));
+      console.log("w = 0x"+w.toString(16));
       
       await deliveryContract.methods
         .finish(receiver, "0x"+w.toString(16))
