@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "68b2afdb4b315de55d94587a8b5391c5",
+    "revision": "794d74e67e1ecac7b203970b39beed55",
     "url": "/PatentConfidentialEDeliveryWithoutTTP/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PatentConfidentialEDeliveryWithoutTTP/static/js/2.07493773.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bf304774013589b7f0d1",
-    "url": "/PatentConfidentialEDeliveryWithoutTTP/static/js/main.38e8caeb.chunk.js"
+    "revision": "df4d571d70b1f5cb96fb",
+    "url": "/PatentConfidentialEDeliveryWithoutTTP/static/js/main.1359af08.chunk.js"
   },
   {
     "revision": "743c5a3a441f1f7e0dc0",
