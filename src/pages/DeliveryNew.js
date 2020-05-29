@@ -3,10 +3,9 @@ import { withRouter, Link } from "react-router-dom";
 import { Form, Button, Message, Input } from 'semantic-ui-react';
 import factory from '../ethereum/factory';
 import web3 from '../ethereum/web3';
+import variables from '../ethereum/variables';
 
-const ElGamal = require('elgamal');
 const bigInt = require("big-integer");
-const NUMBER_BITS = 256;
 
 class DeliveryNew extends Component {
   state = {
@@ -33,37 +32,26 @@ class DeliveryNew extends Component {
     this.setState({ loading: true, errorMessage: '' });
 
     try {
-        let elgamal, p, g, q, xa, ya, r, messageSent, c1, c2;
-
-        // Generation of p, g, q of ElGamal algorithm
-        elgamal = await ElGamal.default.generateAsync(NUMBER_BITS);
-        p = bigInt(elgamal.p.toString());
-        g = bigInt(elgamal.g.toString());
-        q = p.minus(1).divide(2);
-
-        // Generation of xa, ya, private and public keys of A
-        // ya = g^xa mod p
-        xa = bigInt.randBetween(2, q.minus(1));
-        ya = g.modPow(xa, p);
+        let r, messageSent, c1, c2;
         
         // Generation of random number r
-        r = bigInt.randBetween(2, q.minus(1));
+        r = bigInt.randBetween(2, bigInt(variables.q.substr(2), 16).minus(1));
         
         let messageSentBuffer = Buffer.from(this.state.message, 'utf8');
-        messageSent = bigInt(messageSentBuffer.toString('hex'), 16);
+        messageSent = bigInt(messageSentBuffer.toString('hex').substr(2), 16);
 
         // Generation of C1 = g^r mod p
-        c1 = g.modPow(r, p);
+        c1 = bigInt(variables.g.substr(2), 16).modPow(r, bigInt(variables.p.substr(2), 16));
 
         // Generation of C2 = m·ya^r mod p
-        c2 = messageSent.multiply(ya.modPow(r, p));
+        c2 = messageSent.multiply(bigInt(variables.ya.substr(2), 16).modPow(r, bigInt(variables.p.substr(2), 16)));
 
         this.setState({ 
-          p: "0x"+p.toString(16),
-          g: "0x"+g.toString(16),
-          q: "0x"+q.toString(16),
-          xa: "0x"+xa.toString(16),
-          ya: "0x"+ya.toString(16),
+          p: "0x"+bigInt(variables.p.substr(2), 16).toString(16),
+          g: "0x"+bigInt(variables.g.substr(2), 16).toString(16),
+          q: "0x"+bigInt(variables.q.substr(2), 16).toString(16),
+          xa: "0x"+bigInt(variables.xa.substr(2), 16).toString(16),
+          ya: "0x"+bigInt(variables.ya.substr(2), 16).toString(16),
           r: "0x"+r.toString(16),
           c1: "0x"+c1.toString(16),
           c2: "0x"+c2.toString(16)
@@ -138,7 +126,7 @@ class DeliveryNew extends Component {
             />
           </Form.Field>
 
-          <Message error header="Oops!" content={this.state.errorMessage} />
+          <Message error header="ERROR" content={this.state.errorMessage} />
           <Button primary loading={this.state.loading}>
             Send!
           </Button>

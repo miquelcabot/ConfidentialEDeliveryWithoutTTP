@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-import { Table, Button, Icon } from 'semantic-ui-react';
+import { Table, Button, Icon, Message } from 'semantic-ui-react';
 import web3 from '../ethereum/web3';
 import notification from '../ethereum/notification';
-//import Campaign from '../ethereum/campaign';
+import variables from '../ethereum/variables';
 
-let dateFormat = require('dateformat');
+const bigInt = require("big-integer");
+const dateFormat = require('dateformat');
 
 class DeliveryRow extends Component {
   state = {
     address: '',
     timestamp: '',
-    state: ''
+    state: '',
+    loading: false,
+    errorMessage: '',
   };
 
   componentDidMount = async () => {
@@ -23,9 +26,6 @@ class DeliveryRow extends Component {
     d.setUTCSeconds(timestamp);
     timestamp = dateFormat(d, "dd/mm/yyyy HH:MM");
 
-
-    console.log(deliveryContract);
-    console.log(await deliveryContract.methods.receivers(0).call());
     this.setState({ 
       address: address,
       timestamp: timestamp,
@@ -42,6 +42,52 @@ class DeliveryRow extends Component {
     });*/
   };
 
+  onAccept = async (contractAddress) => {
+
+    let c, s, xb, yb, z1, z2;
+
+    this.setState({ loading: true, errorMessage: '' });
+
+    try {
+      let deliveryContract = notification(contractAddress);
+
+      const accounts = await web3.eth.getAccounts();
+
+      let p = bigInt((await deliveryContract.methods.p().call()).substr(2), 16);
+      let g = bigInt((await deliveryContract.methods.g().call()).substr(2), 16);
+      let ya = bigInt((await deliveryContract.methods.ya().call()).substr(2), 16);
+
+      // VARIABLES FOR ACCEPT()
+      // Generation of challenge number c
+      c = bigInt.randBetween(2, bigInt(variables.q.substr(2), 16).minus(1));      // Pot ser mes curt, meitat de bits
+      
+      // Generation of random number s
+      s = bigInt.randBetween(2, bigInt(variables.q.substr(2), 16).minus(1));
+
+      // Generation of xb, yb, private and public keys of B
+      // yb = g^xb mod p
+      xb = bigInt.randBetween(2, bigInt(variables.q.substr(2), 16).minus(1));
+      yb = g.modPow(xb, p);
+
+      // Generation of z1 = g^s mod p
+      z1 = g.modPow(s, p);
+      // Generation of z2 = xb·ya^s mod p
+      z2 = xb.multiply(ya.modPow(s, p));
+      
+      await deliveryContract.methods
+        .accept("0x"+z1.toString(16), "0x"+z2.toString(16), "0x"+yb.toString(16), "0x"+c.toString(16))
+        .send({ from: accounts[0] });
+    } catch (err) {
+      this.setState({ errorMessage: err.message });
+    } finally {
+        this.setState({ loading: false });
+    }
+  };
+
+  onFinish() {
+    alert('finish')
+  };
+
   render() {
       return (
           <Table.Row>
@@ -53,14 +99,14 @@ class DeliveryRow extends Component {
               <Table.Cell>
                   {
                     this.props.sent ? (
-                      <Button animated='vertical' color='blue' onClick={this.onFinish} disabled={this.state.state!='accepted'}>
+                      <Button animated='vertical' color='blue' onClick={this.onFinish} disabled={this.state.state!='accepted'} loading={this.state.loading}>
                         <Button.Content hidden>Finish</Button.Content>
                         <Button.Content visible>
                           <Icon name='send' />
                         </Button.Content>
                       </Button>
                     ) : (
-                      <Button animated='vertical' color='blue' onClick={this.onAccept} disabled={this.state.state!='created'}>
+                      <Button animated='vertical' color='blue' onClick={() => this.onAccept(this.props.delivery)} disabled={this.state.state!='created'} loading={this.state.loading}>
                         <Button.Content hidden>Accept</Button.Content>
                         <Button.Content visible>
                           <Icon name='check' />
@@ -68,17 +114,16 @@ class DeliveryRow extends Component {
                     </Button>
                     )
                   }
-                  {/*<Button basic color='blue' onClick={this.onView}>
-                      {this.props.sent?'Finish':'Accept'}
-      </Button>*/}
                   <Button animated='vertical' color='blue' onClick={this.onView}>
                     <Button.Content hidden>View</Button.Content>
                     <Button.Content visible>
                       <Icon name='eye' />
                     </Button.Content>
                   </Button>
+                  <Message error header="ERROR" content={this.state.errorMessage} hidden={!this.state.errorMessage} />
               </Table.Cell>
           </Table.Row>
+          
       );
     }
 }
