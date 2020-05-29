@@ -55,7 +55,7 @@ class DeliveryRow extends Component {
       const accounts = await web3.eth.getAccounts();
 
       // q of ElGamal algorithm
-      // kkkk TODO: Com ho podem saber?
+      // TODO: Com ho podem saber?
       let q = bigInt(variables.q.substr(2), 16);
       let xb = bigInt(variables.xb.substr(2), 16);
       let yb = bigInt(variables.yb.substr(2), 16);
@@ -103,7 +103,7 @@ class DeliveryRow extends Component {
       // Random number r
       let r = bigInt(variables.r.substr(2), 16)
       // xb private key of B
-      // kkkkk TODO: Com ho podem saber?
+      // TODO: Com ho podem saber?
       let xb = bigInt(variables.xb.substr(2), 16)
 
       let receiver = await deliveryContract.methods.receivers(0).call();

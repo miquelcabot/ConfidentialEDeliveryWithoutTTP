@@ -70,7 +70,7 @@ class DeliveryShow extends Component {
 
       // Calcular MESSAGE
       if (w) {
-        // kkkk TODO: El sender no té Xb
+        // TODO: El sender no té Xb
         let xb = bigInt(variables.xb.substr(2), 16);
 
         let wBig = bigInt(w.substr(2), 16);
