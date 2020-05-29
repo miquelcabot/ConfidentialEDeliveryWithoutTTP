@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import { Table, Button, Icon, Message } from 'semantic-ui-react';
 import web3 from '../ethereum/web3';
 import notification from '../ethereum/notification';
@@ -154,12 +155,14 @@ class DeliveryRow extends Component {
                     </Button>
                     )
                   }
-                  <Button animated='vertical' color='blue' onClick={this.onView}>
-                    <Button.Content hidden>View</Button.Content>
-                    <Button.Content visible>
-                      <Icon name='eye' />
-                    </Button.Content>
-                  </Button>
+                  <Link to={"/deliveries/"+this.props.delivery}>
+                    <Button animated='vertical' color='blue' onClick={this.onView}>
+                      <Button.Content hidden>View</Button.Content>
+                      <Button.Content visible>
+                        <Icon name='eye' />
+                      </Button.Content>
+                    </Button>
+                  </Link>
                   <Message error header="ERROR" content={this.state.errorMessage} hidden={!this.state.errorMessage} />
               </Table.Cell>
           </Table.Row>

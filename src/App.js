@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import DeliveryNew from './pages/DeliveryNew';
+import DeliveryShow from './pages/DeliveryShow';
 /*import CampaignNew from './pages/CampaignNew';
 import CampaignShow from './pages/CampaignShow';
 import RequestShow from './pages/RequestShow';
@@ -19,6 +20,7 @@ class App extends Component {
                     <Switch>
                         <Route exact path='/' component={Home}/>
                         <Route exact path='/deliveries/new' component={DeliveryNew}/>
+                        <Route exact path='/deliveries/:address' component={DeliveryShow}/>
                         {/*<Route exact path='/campaigns/:address' component={CampaignShow}/>
                         <Route exact path='/campaigns/:address/requests' component={RequestShow}/>
                         <Route exact path='/campaigns/:address/requests/new' component={RequestNew}/>*/}
