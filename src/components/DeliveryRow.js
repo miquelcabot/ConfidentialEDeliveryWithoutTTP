@@ -10,8 +10,8 @@ const dateFormat = require('dateformat');
 
 class DeliveryRow extends Component {
   state = {
-    address: '',
-    timestamp: '',
+    receiver: '',
+    start: '',
     state: '',
     loading: false,
     errorMessage: '',
@@ -19,17 +19,17 @@ class DeliveryRow extends Component {
 
   componentDidMount = async () => {
     let deliveryContract = notification(this.props.delivery);
-    let address = await deliveryContract.methods.receivers(0).call();
-    let timestamp = await deliveryContract.methods.start().call();
-    let state = await deliveryContract.methods.getState(address).call();
+    let receiver = await deliveryContract.methods.receivers(0).call();
+    let start = await deliveryContract.methods.start().call();
+    let state = await deliveryContract.methods.getState(receiver).call();
 
     let d = new Date(0);
-    d.setUTCSeconds(timestamp);
-    timestamp = dateFormat(d, "dd/mm/yyyy HH:MM");
+    d.setUTCSeconds(start);
+    start = dateFormat(d, "dd/mm/yyyy HH:MM");
 
     this.setState({ 
-      address: address,
-      timestamp: timestamp,
+      receiver: receiver,
+      start: start,
       state: state
     });
   }
@@ -134,20 +134,20 @@ class DeliveryRow extends Component {
           <Table.Row>
               <Table.Cell>{this.props.id+1}</Table.Cell>
               <Table.Cell>{this.props.delivery}</Table.Cell>
-              <Table.Cell>{this.state.address}</Table.Cell>
-              <Table.Cell>{this.state.timestamp}</Table.Cell>
+              <Table.Cell>{this.state.receiver}</Table.Cell>
+              <Table.Cell>{this.state.start}</Table.Cell>
               <Table.Cell>{this.state.state}</Table.Cell>
               <Table.Cell>
                   {
                     this.props.sent ? (
-                      <Button animated='vertical' color='blue' onClick={() => this.onFinish(this.props.delivery)} disabled={this.state.state!='accepted'} loading={this.state.loading}>
+                      <Button animated='vertical' color='blue' onClick={() => this.onFinish(this.props.delivery)} disabled={this.state.state!=='accepted'} loading={this.state.loading}>
                         <Button.Content hidden>Finish</Button.Content>
                         <Button.Content visible>
                           <Icon name='send' />
                         </Button.Content>
                       </Button>
                     ) : (
-                      <Button animated='vertical' color='blue' onClick={() => this.onAccept(this.props.delivery)} disabled={this.state.state!='created'} loading={this.state.loading}>
+                      <Button animated='vertical' color='blue' onClick={() => this.onAccept(this.props.delivery)} disabled={this.state.state!=='created'} loading={this.state.loading}>
                         <Button.Content hidden>Accept</Button.Content>
                         <Button.Content visible>
                           <Icon name='check' />
