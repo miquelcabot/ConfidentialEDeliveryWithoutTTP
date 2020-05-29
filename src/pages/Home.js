@@ -56,6 +56,7 @@ class Home extends Component {
                     key={index}
                     id={index}
                     delivery={delivery}
+                    sent={sent}
                 />
             );
         });
@@ -85,13 +86,13 @@ class Home extends Component {
                             <Table.HeaderCell>Sender</Table.HeaderCell>
                             <Table.HeaderCell>Timestamp</Table.HeaderCell>
                             <Table.HeaderCell>State</Table.HeaderCell>
-                            <Table.HeaderCell>View</Table.HeaderCell>
+                            <Table.HeaderCell>Action</Table.HeaderCell>
                         </Table.Row>
                     </Table.Header>
                     <Table.Body>{this.renderDeliveryRows(false)}</Table.Body>
                 </Table>
                 <h3><Icon name='sign out alternate' circular />&nbsp;Sent deliveries</h3>
-                <Table>
+                <Table fixed>
                     <Table.Header>
                         <Table.Row>
                             <Table.HeaderCell>#</Table.HeaderCell>
@@ -99,7 +100,7 @@ class Home extends Component {
                             <Table.HeaderCell>Receiver</Table.HeaderCell>
                             <Table.HeaderCell>Timestamp</Table.HeaderCell>
                             <Table.HeaderCell>State</Table.HeaderCell>
-                            <Table.HeaderCell>View</Table.HeaderCell>
+                            <Table.HeaderCell>Action</Table.HeaderCell>
                         </Table.Row>
                     </Table.Header>
                     <Table.Body>{this.renderDeliveryRows(true)}</Table.Body>

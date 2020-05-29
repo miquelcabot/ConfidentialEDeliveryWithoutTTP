@@ -36,6 +36,7 @@
   "private": true,
   "dependencies": {
     "big-integer": "^1.6.43",
+    "dateformat": "^3.0.3",
     "elgamal": "^0.3.0",
     "fs-extra": "^6.0.1",
     "ganache-cli": "^6.0.3",
