@@ -1,6 +1,10 @@
 import Web3 from 'web3';
 
-const web3 = new Web3(window.web3.currentProvider);
+let web3
+
+if (window.web3) {
+  web3 = new Web3(window.web3.currentProvider);
+}
 
 /*
 https://medium.com/@parag.chirde/building-a-dapp-on-ethereum-with-vuejs-and-solidity-d01a24b54c1f
