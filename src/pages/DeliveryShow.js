@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from "react-router-dom";
-import { Form, Button, Message, Input } from 'semantic-ui-react';
+import { Form, Button, Message, Input, Dimmer, Loader } from 'semantic-ui-react';
 import notification from '../ethereum/notification';
 import web3 from '../ethereum/web3';
 
@@ -27,10 +27,13 @@ class DeliveryShow extends Component {
     w: '',
     message: '',
     deposit: '',
+    loading: false,
     errorMessage: ''
   };
 
   componentDidMount = async () => {
+
+    this.setState({ loading: true, errorMessage: '' });
 
     try {
       let address = this.props.match.params.address;
@@ -84,6 +87,8 @@ class DeliveryShow extends Component {
       });
     } catch (err) {
       this.setState({ errorMessage: err.message });
+    } finally {
+      this.setState({ loading: false });
     }
   }
 
@@ -97,6 +102,9 @@ class DeliveryShow extends Component {
   render() {
     return (
       <div>
+        <Dimmer inverted active={this.state.loading}>
+          <Loader inverted content='Loading...'></Loader>
+        </Dimmer>
         <Link to='/'>Back</Link>
         <h3>Show Delivery</h3>
         <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
