@@ -35,7 +35,7 @@ class DeliveryNew extends Component {
         let ya = bigInt(variables.ya.substr(2), 16)
         
         let messageSentBuffer = Buffer.from(this.state.message, 'utf8');
-        let messageSent = bigInt(messageSentBuffer.toString('hex').substr(2), 16);
+        let messageSent = bigInt(messageSentBuffer.toString('hex'), 16);
 
         // Generation of C1 = g^r mod p
         c1 = g.modPow(r, p);

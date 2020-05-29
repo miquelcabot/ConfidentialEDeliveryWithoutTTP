@@ -45,7 +45,7 @@ class DeliveryRow extends Component {
 
   onAccept = async (contractAddress) => {
 
-    let c, s, xb, yb, z1, z2;
+    let c, s, z1, z2;
 
     this.setState({ loading: true, errorMessage: '' });
 
@@ -56,7 +56,9 @@ class DeliveryRow extends Component {
 
       // q of ElGamal algorithm
       // kkkk TODO: Com ho podem saber?
-      let q = bigInt(variables.q.substr(2), 16)
+      let q = bigInt(variables.q.substr(2), 16);
+      let xb = bigInt(variables.xb.substr(2), 16);
+      let yb = bigInt(variables.yb.substr(2), 16);
 
       let p = bigInt((await deliveryContract.methods.p().call()).substr(2), 16);
       let g = bigInt((await deliveryContract.methods.g().call()).substr(2), 16);
@@ -68,11 +70,6 @@ class DeliveryRow extends Component {
       
       // Generation of random number s
       s = bigInt.randBetween(2, q.minus(1));
-
-      // Generation of xb, yb, private and public keys of B
-      // yb = g^xb mod p
-      xb = bigInt.randBetween(2, q.minus(1));
-      yb = g.modPow(xb, p);
 
       // Generation of z1 = g^s mod p
       z1 = g.modPow(s, p);
@@ -117,12 +114,6 @@ class DeliveryRow extends Component {
       //const w = r.add(c.mod(p).multiply(xb.mod(p)).mod(p));
       
       w =  r.add(c.multiply(xb.mod(p)));
-
-      console.log("r = 0x"+r.toString(16));
-      console.log("c = 0x"+c.toString(16));
-      console.log("xb = 0x"+xb.toString(16));
-      console.log("p = 0x"+p.toString(16));
-      console.log("w = 0x"+w.toString(16));
       
       await deliveryContract.methods
         .finish(receiver, "0x"+w.toString(16))

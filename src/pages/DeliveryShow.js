@@ -3,7 +3,9 @@ import { withRouter, Link } from "react-router-dom";
 import { Form, Button, Message, Input, Dimmer, Loader } from 'semantic-ui-react';
 import notification from '../ethereum/notification';
 import web3 from '../ethereum/web3';
+import variables from '../ethereum/variables';
 
+const bigInt = require("big-integer");
 const dateFormat = require('dateformat');
 
 class DeliveryShow extends Component {
@@ -60,10 +62,30 @@ class DeliveryShow extends Component {
       let yb = receiversState.yb;
       let c = receiversState.c;
       let w = receiversState.w;
+      let message = '';
 
       let d = new Date(0);
       d.setUTCSeconds(start);
       start = dateFormat(d, "dd/mm/yyyy HH:MM");
+
+      // Calcular MESSAGE
+      if (w) {
+        // kkkk TODO: El sender no té Xb
+        
+        let xb = bigInt(variables.xb.substr(2), 16);
+
+        let wBig = bigInt(w.substr(2), 16);
+        let cBig = bigInt(c.substr(2), 16);
+        let pBig = bigInt(p.substr(2), 16);
+        let c2Big = bigInt(c2.substr(2), 16);
+        let yaBig = bigInt(ya.substr(2), 16);
+        
+        let r = wBig.subtract(cBig.multiply(xb.mod(pBig)));  // r = w-c*xb mod q
+
+        const messageReceived = c2Big.divide(yaBig.modPow(r, pBig));
+        message = Buffer.from(messageReceived.toString(16), 'hex');
+      }
+      
 
       this.setState({ 
         address: address,
@@ -83,6 +105,7 @@ class DeliveryShow extends Component {
         yb: yb,
         c: c,
         w: w,
+        message: message,
         deposit: deposit
       });
     } catch (err) {
@@ -253,7 +276,6 @@ class DeliveryShow extends Component {
             <Input
               readOnly
               value={this.state.message}
-              onChange={event => this.setState({ message: event.target.value })}
             />
           </Form.Field>
 
