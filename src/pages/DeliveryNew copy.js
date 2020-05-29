@@ -15,7 +15,15 @@ class DeliveryNew extends Component {
     term2: '',
     deposit: '',
     loading: false,
-    errorMessage: ''
+    errorMessage: '',
+    p: '',
+    g: '',
+    q: '',
+    xa: '',
+    ya: '',
+    r: '',
+    c1: '',
+    c2: ''
   };
 
   onSubmit = async event => {
@@ -24,33 +32,27 @@ class DeliveryNew extends Component {
     this.setState({ loading: true, errorMessage: '' });
 
     try {
-        let c1, c2;
+        let r, messageSent, c1, c2;
         
-        // p, g of ElGamal algorithm
-        let p = bigInt(variables.p.substr(2), 16)
-        let g = bigInt(variables.g.substr(2), 16)
-        // Random number r
-        let r = bigInt(variables.r.substr(2), 16)
-        // ya public key of A
-        let ya = bigInt(variables.ya.substr(2), 16)
+        // Generation of random number r
+        r = bigInt.randBetween(2, bigInt(variables.q.substr(2), 16).minus(1));
         
         let messageSentBuffer = Buffer.from(this.state.message, 'utf8');
-        let messageSent = bigInt(messageSentBuffer.toString('hex').substr(2), 16);
+        messageSent = bigInt(messageSentBuffer.toString('hex').substr(2), 16);
 
         // Generation of C1 = g^r mod p
-        c1 = g.modPow(r, p);
+        c1 = bigInt(variables.g.substr(2), 16).modPow(r, bigInt(variables.p.substr(2), 16));
 
         // Generation of C2 = m·ya^r mod p
-        c2 = messageSent.multiply(ya.modPow(r, p));
+        c2 = messageSent.multiply(bigInt(variables.ya.substr(2), 16).modPow(r, bigInt(variables.p.substr(2), 16)));
         
         const accounts = await web3.eth.getAccounts();
         await factory.methods
-            .createDelivery([this.state.receiver], "0x"+c1.toString(16), "0x"+c2.toString(16),
-              "0x"+ya.toString(16), "0x"+g.toString(16), "0x"+p.toString(16), this.state.term1, 
+            .createDelivery([this.state.receiver], this.state.c1, this.state.c2,
+              this.state.ya, this.state.g, this.state.p, this.state.term1, 
               this.state.term2)
             .send({ from: accounts[0], value: this.state.deposit });
 
-        alert('Delivery created!');
         // Refresh, using withRouter
         this.props.history.push('/');
     } catch (err) {
@@ -117,6 +119,70 @@ class DeliveryNew extends Component {
           <Button primary loading={this.state.loading}>
             Send!
           </Button>
+
+          <Form.Field>
+            <label>p of ElGamal algorithm</label>
+            <Input
+              disabled
+              value={this.state.p}
+            />
+          </Form.Field>
+
+          <Form.Field>
+            <label>g of ElGamal algorithm</label>
+            <Input
+              disabled
+              value={this.state.g}
+            />
+          </Form.Field>
+
+          <Form.Field>
+            <label>q of ElGamal algorithm</label>
+            <Input
+              disabled
+              value={this.state.q}
+            />
+          </Form.Field>
+
+          <Form.Field>
+            <label>xa private key of A</label>
+            <Input
+              disabled
+              value={this.state.xa}
+            />
+          </Form.Field>
+
+          <Form.Field>
+            <label>ya public key of A, ya = g^xa mod p</label>
+            <Input
+              disabled
+              value={this.state.ya}
+            />
+          </Form.Field>
+
+          <Form.Field>
+            <label>r random number</label>
+            <Input
+              disabled
+              value={this.state.r}
+            />
+          </Form.Field>
+
+          <Form.Field>
+            <label>c1 = g^r mod p</label>
+            <Input
+              disabled
+              value={this.state.c1}
+            />
+          </Form.Field>
+
+          <Form.Field>
+            <label>c2 = m·ya^r mod p</label>
+            <Input
+              disabled
+              value={this.state.c2}
+            />
+          </Form.Field>
         </Form>
       </div>
     );
