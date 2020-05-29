@@ -128,7 +128,7 @@ class DeliveryShow extends Component {
         </Dimmer>
         <Link to='/'>Back</Link>
         <h3>Show Delivery</h3>
-        <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
+        <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage} hidden={this.state.loading}>
           <Form.Field>
             <label>Address of Smart Contract</label>
             <Input
