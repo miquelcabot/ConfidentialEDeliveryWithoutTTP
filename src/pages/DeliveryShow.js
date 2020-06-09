@@ -182,6 +182,14 @@ class DeliveryShow extends Component {
           </Form.Field>
 
           <Form.Field>
+            <label>q of ElGamal algorithm</label>
+            <Input
+              readOnly
+              value={variables.q}
+            />
+          </Form.Field>
+
+          <Form.Field>
             <label>g of ElGamal algorithm</label>
             <Input
               readOnly
