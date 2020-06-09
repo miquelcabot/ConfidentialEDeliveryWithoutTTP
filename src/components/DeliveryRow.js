@@ -81,7 +81,8 @@ class DeliveryRow extends Component {
         .send({ from: accounts[0] });
 
       // Refresh
-      alert('Accepted delivery! Please, refresh your browser.');
+      alert('Delivery accepted!');
+      this.setState({ state: 'accepted' });
     } catch (err) {
       this.setState({ errorMessage: err.message });
     } finally {
@@ -120,7 +121,8 @@ class DeliveryRow extends Component {
         .send({ from: accounts[0] });
 
       // Refresh
-      alert('Finished delivery! Please, refresh your browser.');
+      alert('Delivery finished!');
+      this.setState({ state: 'finished' });
     } catch (err) {
       this.setState({ errorMessage: err.message });
     } finally {
