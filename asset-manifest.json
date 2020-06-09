@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.js": "/PatentConfidentialEDeliveryWithoutTTP/static/js/main.1359af08.chunk.js",
-    "main.js.map": "/PatentConfidentialEDeliveryWithoutTTP/static/js/main.1359af08.chunk.js.map",
+    "main.js": "/PatentConfidentialEDeliveryWithoutTTP/static/js/main.0fa02b45.chunk.js",
+    "main.js.map": "/PatentConfidentialEDeliveryWithoutTTP/static/js/main.0fa02b45.chunk.js.map",
     "runtime-main.js": "/PatentConfidentialEDeliveryWithoutTTP/static/js/runtime-main.1b69e88a.js",
     "runtime-main.js.map": "/PatentConfidentialEDeliveryWithoutTTP/static/js/runtime-main.1b69e88a.js.map",
     "static/css/2.8df2c72d.chunk.css": "/PatentConfidentialEDeliveryWithoutTTP/static/css/2.8df2c72d.chunk.css",
-    "static/js/2.07493773.chunk.js": "/PatentConfidentialEDeliveryWithoutTTP/static/js/2.07493773.chunk.js",
-    "static/js/2.07493773.chunk.js.map": "/PatentConfidentialEDeliveryWithoutTTP/static/js/2.07493773.chunk.js.map",
+    "static/js/2.ac69ed89.chunk.js": "/PatentConfidentialEDeliveryWithoutTTP/static/js/2.ac69ed89.chunk.js",
+    "static/js/2.ac69ed89.chunk.js.map": "/PatentConfidentialEDeliveryWithoutTTP/static/js/2.ac69ed89.chunk.js.map",
     "index.html": "/PatentConfidentialEDeliveryWithoutTTP/index.html",
-    "precache-manifest.3f406a4d133449fbc5e6890373de0e23.js": "/PatentConfidentialEDeliveryWithoutTTP/precache-manifest.3f406a4d133449fbc5e6890373de0e23.js",
+    "precache-manifest.4cafb7291ee1da17461e4ab7dd161224.js": "/PatentConfidentialEDeliveryWithoutTTP/precache-manifest.4cafb7291ee1da17461e4ab7dd161224.js",
     "service-worker.js": "/PatentConfidentialEDeliveryWithoutTTP/service-worker.js",
     "static/css/2.8df2c72d.chunk.css.map": "/PatentConfidentialEDeliveryWithoutTTP/static/css/2.8df2c72d.chunk.css.map",
-    "static/js/2.07493773.chunk.js.LICENSE.txt": "/PatentConfidentialEDeliveryWithoutTTP/static/js/2.07493773.chunk.js.LICENSE.txt",
+    "static/js/2.ac69ed89.chunk.js.LICENSE.txt": "/PatentConfidentialEDeliveryWithoutTTP/static/js/2.ac69ed89.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/PatentConfidentialEDeliveryWithoutTTP/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.1b69e88a.js",
     "static/css/2.8df2c72d.chunk.css",
-    "static/js/2.07493773.chunk.js",
-    "static/js/main.1359af08.chunk.js"
+    "static/js/2.ac69ed89.chunk.js",
+    "static/js/main.0fa02b45.chunk.js"
   ]
 }
