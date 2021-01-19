@@ -1,5 +1,5 @@
-# PatentConfidentialEDeliveryWithoutTTP
-Protocol pel 2n article de IEEE Access (eDelivery confidencial multipart sense TTP) per la patent, amb interfície web ReactJS
+# ConfidentialEDeliveryWithoutTTP
+Protocol pel 2n article de IEEE Access (eDelivery confidencial multipart sense TTP), amb interfície web ReactJS
 
 ## Requirements
 Requirements: [Node 8.0](https://nodejs.org/en/download/).
